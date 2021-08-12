@@ -71,5 +71,22 @@ public class Fragment4 extends Fragment {
             }
         });
 
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onTabSelected(6);  // fragment_7으로 전환
+                }
+            }
+        });
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onTabSelected(5);  // fragment_6으로 전환
+                }
+            }
+        });
     }
 }
