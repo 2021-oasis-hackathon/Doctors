@@ -51,23 +51,25 @@ public class Fragment1 extends Fragment {
         editText1 = rootView.findViewById(R.id.editText1);
         editText2 = rootView.findViewById(R.id.editText2);
 
-        String ID, PW;
-        ID = editText1.getText().toString();
-        PW = editText2.getText().toString();
+        final String[] id = new String[1];
+        final String[] pw = new String[1];
 
         Button LoginButton = rootView.findViewById(R.id.button);
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ID.length() == 0) {
+                id[0] = editText1.getText().toString();
+                pw[0] = editText2.getText().toString();
+
+                if (id[0].length() == 0) {
                     Toast.makeText(getContext(), "ID를 다시 입력해주세요", Toast.LENGTH_LONG).show();
                 }
-                else if (PW.length() == 0) {
+                else if (pw[0].length() == 0) {
                     Toast.makeText(getContext(), "PW를 다시 입력해주세요", Toast.LENGTH_LONG).show();
                 }
                 else {
                     if (listener != null) {
-                        listener.onTabSelected(1);
+                        listener.onTabSelected(1);  // fragment_1으로 전환
                     }
                 }
             }

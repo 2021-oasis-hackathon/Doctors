@@ -3,57 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/design_default_color_secondary"
     tools:context=".Fragment2">
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="242dp"
-        android:layout_height="39dp"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="67dp"
-        android:background="@color/colorPrimary" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="242dp"
-        android:layout_height="39dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="67dp"
-        android:background="@color/colorPrimary" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="17dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="검색어를 입력하시오"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="17dp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="89dp"
-        android:text="나이"
-        android:textSize="25sp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="78dp"
+        android:text="어디가 불편하신가요?"
+        android:textSize="28sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="142dp"
-        android:text="질병"
-        android:textSize="25sp"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="129dp"
+        android:text="생각나시는대로 편하게 입력해주세요 " />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="151dp"
+        android:text="(예시) 배가 아파요, 우울해요" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="304dp"
+        android:src="@drawable/my_info" />
 
 </RelativeLayout>
