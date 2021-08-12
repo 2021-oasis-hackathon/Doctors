@@ -69,7 +69,7 @@ public class Fragment1 extends Fragment {
                 }
                 else {
                     if (listener != null) {
-                        listener.onTabSelected(1);  // fragment_1으로 전환
+                        listener.onTabSelected(1);  // fragment_2로 전환
                     }
                 }
             }

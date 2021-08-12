@@ -24,6 +24,14 @@ import androidx.fragment.app.Fragment;
 
 public class Fragment3 extends Fragment {
 
+    Context context;
+    Button btnCapture, btnSave;
+    ImageView imgCapture;
+    private static final int Image_Capture_Code = 1;
+
+
+    org.techtown.oasis.OnTabItemSelectedListener listener;
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -37,14 +45,6 @@ public class Fragment3 extends Fragment {
             }
         }
     }
-
-    Context context;
-    Button btnCapture;
-    ImageView imgCapture;
-    private static final int Image_Capture_Code = 1;
-
-
-    org.techtown.oasis.OnTabItemSelectedListener listener;
 
     @Override
     public void onAttach(Context context) {
@@ -115,8 +115,20 @@ public class Fragment3 extends Fragment {
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent cInt = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(cInt,Image_Capture_Code);
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent,Image_Capture_Code);
+            }
+        });
+
+        // 저장 버튼
+        btnSave = rootView.findViewById(R.id.button2);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onTabSelected(1);  // fragment_2로 전환
+                }
             }
         });
     }
