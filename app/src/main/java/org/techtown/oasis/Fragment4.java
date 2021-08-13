@@ -48,7 +48,7 @@ public class Fragment4 extends Fragment {
     private void initUI(ViewGroup rootView) {
         Button button1, button2, button3, button4, button5;
 
-        button1 = rootView.findViewById(R.id.button1);
+        //button1 = rootView.findViewById(R.id.button1);
         button2 = rootView.findViewById(R.id.button2);
         button3 = rootView.findViewById(R.id.button3);
         button4 = rootView.findViewById(R.id.button4);
@@ -57,9 +57,11 @@ public class Fragment4 extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (listener != null) {
-                    listener.onTabSelected(0);  // fragment_2으로 전환
-                }
+                // fragment_3으로 전환
+                Fragment3 fragment3 = new Fragment3();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, fragment3);
+                transaction.commit();
             }
         });
 

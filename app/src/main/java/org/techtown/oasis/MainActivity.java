@@ -49,17 +49,17 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.tab1:
-                                Toast.makeText(getApplicationContext(), "첫 번째 탭 선택됨", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getApplicationContext(), "첫 번째 탭 선택됨", Toast.LENGTH_LONG).show();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
 
                                 return true;
                             case R.id.tab2:
-                                Toast.makeText(getApplicationContext(), "두 번째 탭 선택됨", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getApplicationContext(), "두 번째 탭 선택됨", Toast.LENGTH_LONG).show();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment6).commit();
 
                                 return true;
                             case R.id.tab3:
-                                Toast.makeText(getApplicationContext(), "세 번째 탭 선택됨", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getApplicationContext(), "세 번째 탭 선택됨", Toast.LENGTH_LONG).show();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment5).commit();
 
                                 return true;
