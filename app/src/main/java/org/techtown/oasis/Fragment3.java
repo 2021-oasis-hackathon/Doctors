@@ -127,7 +127,7 @@ public class Fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 if (listener != null) {
-                    listener.onTabSelected(1);  // fragment_2로 전환
+                    listener.onTabSelected(0);  // fragment_2로 전환
                 }
             }
         });

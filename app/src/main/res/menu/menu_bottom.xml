@@ -4,27 +4,20 @@
 
     <item
         android:id="@+id/tab1"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
         android:title="홈" />
 
     <item
         android:id="@+id/tab2"
-        app:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_dialog_info"
+        app:showAsAction="always"
+        android:enabled="true"
         android:title="예약내역" />
 
     <item
         android:id="@+id/tab3"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_map"
         android:title="진료내역" />
 
-    <item
-        android:id="@+id/tab4"
-        android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_map"
-        android:title="MY" />
 </menu>

@@ -54,7 +54,7 @@ public class Fragment1 extends Fragment {
         final String[] id = new String[1];
         final String[] pw = new String[1];
 
-        Button LoginButton = rootView.findViewById(R.id.button);
+        Button LoginButton = rootView.findViewById(R.id.myButton);
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +69,7 @@ public class Fragment1 extends Fragment {
                 }
                 else {
                     if (listener != null) {
-                        listener.onTabSelected(1);  // fragment_2로 전환
+                        listener.onTabSelected(0);  // fragment_2로 전환
                     }
                 }
             }

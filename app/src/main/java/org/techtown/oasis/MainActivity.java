@@ -1,14 +1,16 @@
 package org.techtown.oasis;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
         fragment6 = new org.techtown.oasis.Fragment6();
         fragment7 = new org.techtown.oasis.Fragment7();
 
+        // 처음에는 프래그먼트1
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
 
         bottomNavigation = findViewById(R.id.bottom_navigation);
@@ -60,15 +63,19 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
                                 getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment5).commit();
 
                                 return true;
-                            case R.id.tab4:
-                                Toast.makeText(getApplicationContext(), "네 번째 탭 선택됨", Toast.LENGTH_LONG).show();
-                                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment4).commit();
-
-                                return true;
                         }
                         return false;
                     }
                 });
+
+        Button myButton = findViewById(R.id.myButton);
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // fragment_4로 전환
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment4).commit();
+            }
+        });
     }
 
     public void onTabSelected(int position) {
@@ -78,8 +85,6 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
             bottomNavigation.setSelectedItemId(R.id.tab2);
         } else if (position == 2) {
             bottomNavigation.setSelectedItemId(R.id.tab3);
-        } else if (position == 3) {
-            bottomNavigation.setSelectedItemId(R.id.tab4);
         }
     }
 

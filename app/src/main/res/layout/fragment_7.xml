@@ -3,4 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment7" />
+    tools:context=".Fragment7" >
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="332dp"
+        android:layout_height="101dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="296dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:text="의료 해택 페이지"
+        android:textSize="40sp" />
+</RelativeLayout>
