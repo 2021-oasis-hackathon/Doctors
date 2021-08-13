@@ -7,6 +7,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -59,26 +60,25 @@ public class Fragment2 extends Fragment {
     }
 
     private void initUI(ViewGroup rootView) {
-
+        // 검색 창 구현
         editSearch = (EditText) rootView.findViewById(R.id.editSearch);
         listView = (ListView) rootView.findViewById(R.id.listView);
-
         //listView.setVisibility(View.INVISIBLE); // 리스트 뷰 숨김
 
         // 리스트 생성
         list = new ArrayList<String>();
 
-        // 검색에 사용할 데이터을 미리 저장한다.
+        // 검색에 사용할 데이터을 미리 저장
         settingList();
 
         // 리스트의 모든 데이터를 arraylist에 복사
         arraylist = new ArrayList<String>();
         arraylist.addAll(list);
 
-        // 리스트에 연동될 어댑터를 생성한다.
+        // 리스트에 연동될 어댑터 생성
         adapter = new SearchAdapter(list, getContext());
 
-        // 리스트뷰에 아답터를 연결한다.
+        // 리스트뷰에 어댑터 연결
         listView.setAdapter(adapter);
 
         // input창에 검색어를 입력시 "addTextChangedListener" 이벤트 리스너를 정의한다.
@@ -98,6 +98,19 @@ public class Fragment2 extends Fragment {
                 // search 메소드를 호출한다.
                 String text = editSearch.getText().toString();
                 search(text);
+            }
+        });
+
+        // 검색 버튼
+        Button searchButton = rootView.findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 의사 리스트 화면으로 전환(fragment_8)
+                Fragment8 fragment8 = new Fragment8();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, fragment8);
+                transaction.commit();
             }
         });
 
