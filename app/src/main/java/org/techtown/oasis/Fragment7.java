@@ -13,7 +13,7 @@ public class Fragment7 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_4, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_7, container, false);
 
         initUI(rootView);
 
