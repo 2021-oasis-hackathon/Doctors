@@ -7,11 +7,13 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -22,7 +24,7 @@ import java.util.List;
 public class Fragment2 extends Fragment {
 
     private List<String> list;          // 데이터를 넣은 리스트
-    private ListView listView;          // 검색을 보여줄 리스트
+    private ListView listView;          // 검색 리스트
     private EditText editSearch;        // 검색어를 입력할 Input 창
     private SearchAdapter adapter;      // 리스트 뷰에 연결할 어댑터
     private ArrayList<String> arraylist;
@@ -63,12 +65,12 @@ public class Fragment2 extends Fragment {
         // 검색 창 구현
         editSearch = (EditText) rootView.findViewById(R.id.editSearch);
         listView = (ListView) rootView.findViewById(R.id.listView);
-        //listView.setVisibility(View.INVISIBLE); // 리스트 뷰 숨김
+        // listView.setVisibility(View.INVISIBLE); // 리스트 뷰 숨김
 
         // 리스트 생성
         list = new ArrayList<String>();
 
-        // 검색에 사용할 데이터을 미리 저장
+        // 검색에 사용할 데이터을 검색 전에 저장
         settingList();
 
         // 리스트의 모든 데이터를 arraylist에 복사
@@ -78,8 +80,16 @@ public class Fragment2 extends Fragment {
         // 리스트에 연동될 어댑터 생성
         adapter = new SearchAdapter(list, getContext());
 
-        // 리스트뷰에 어댑터 연결
+        // 리스트 뷰에 어댑터 연결
         listView.setAdapter(adapter);
+
+        // 리스트의 아이템 클릭시 동작
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                editSearch.setText(list.get(position));  // editText에 아이템의 텍스트 저장
+            }
+        });
 
         // input창에 검색어를 입력시 "addTextChangedListener" 이벤트 리스너를 정의
         editSearch.addTextChangedListener(new TextWatcher() {
@@ -105,17 +115,31 @@ public class Fragment2 extends Fragment {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 의사 리스트 화면으로 전환(fragment_8)
-                Fragment8 fragment8 = new Fragment8();
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.container, fragment8);
-                transaction.commit();
+
+                boolean b = false;
+                String searchedText = editSearch.getText().toString();
+
+                for (int i = 0; i < arraylist.size(); i++) {
+                    //Toast.makeText(getContext(), arraylist.get(i), Toast.LENGTH_SHORT).show();
+                    // 리스트에 있는 단어를 검색했으면
+                    if (searchedText.equals(arraylist.get(i))) {
+                        b = true;
+                    }
+                }
+                if (b) {
+                    // 의사 리스트 화면으로 전환(fragment_8)
+                    Fragment8 fragment8 = new Fragment8();
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.container, fragment8);
+                    transaction.commit();
+                } else {
+                    Toast.makeText(getContext(), "검색어를 다시 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-        // 내 정보 입력하러 가기
+        // 내 정보 입력하러 가기 버튼
         ImageButton myInfoButton;
-
         myInfoButton = rootView.findViewById(R.id.imageButton);
         myInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -201,4 +225,6 @@ public class Fragment2 extends Fragment {
             }
         }
     }
+
+
 }
