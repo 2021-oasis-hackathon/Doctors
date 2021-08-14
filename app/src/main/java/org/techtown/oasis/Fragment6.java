@@ -34,9 +34,9 @@ public class Fragment6 extends Fragment {
         tabLayout = view.findViewById(R.id.tabLayout2);
         viewPager = view.findViewById(R.id.viewPager2);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new FragmentChild1(), "Child 1");
-        adapter.addFragment(new FragmentChild2(), "Child 2");
-        adapter.addFragment(new FragmentChild3(), "Child 3");
+        adapter.addFragment(new FragmentChild1(), "병원 예약");
+        adapter.addFragment(new FragmentChild2(), "약 배송");
+        adapter.addFragment(new FragmentChild3(), "방문 간호");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }

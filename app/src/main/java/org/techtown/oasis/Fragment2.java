@@ -21,8 +21,8 @@ import java.util.List;
 
 public class Fragment2 extends Fragment {
 
-    private List<String> list;          // 데이터를 넣은 리스트 변수
-    private ListView listView;          // 검색을 보여줄 리스트 변수
+    private List<String> list;          // 데이터를 넣은 리스트
+    private ListView listView;          // 검색을 보여줄 리스트
     private EditText editSearch;        // 검색어를 입력할 Input 창
     private SearchAdapter adapter;      // 리스트 뷰에 연결할 어댑터
     private ArrayList<String> arraylist;
@@ -81,7 +81,7 @@ public class Fragment2 extends Fragment {
         // 리스트뷰에 어댑터 연결
         listView.setAdapter(adapter);
 
-        // input창에 검색어를 입력시 "addTextChangedListener" 이벤트 리스너를 정의한다.
+        // input창에 검색어를 입력시 "addTextChangedListener" 이벤트 리스너를 정의
         editSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -93,11 +93,10 @@ public class Fragment2 extends Fragment {
             }
 
             @Override
+            // input창에 문자를 입력할 때마다 호출
             public void afterTextChanged(Editable editable) {
-                // input창에 문자를 입력할때마다 호출된다.
-                // search 메소드를 호출한다.
                 String text = editSearch.getText().toString();
-                search(text);
+                search(text);  // search 메소드 호출
             }
         });
 

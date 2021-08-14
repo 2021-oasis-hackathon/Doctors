@@ -54,6 +54,8 @@ public class Fragment1 extends Fragment {
         final String[] id = new String[1];
         final String[] pw = new String[1];
 
+        //((MainActivity)getActivity()).onWindowFocusChanged(true);
+
         Button LoginButton = rootView.findViewById(R.id.myButton);
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,4 +77,5 @@ public class Fragment1 extends Fragment {
             }
         });
     }
+
 }
