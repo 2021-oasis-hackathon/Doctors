@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorList.Fragment16">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/call_button2"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="51dp"
+        android:text="진료 요청하기"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="178dp"
+        android:text="소속: 고려대학교 안암병원\n경력: 고려대학교 대학원 의학 박사\n고려대학교 의과대학 정신건강의학과 교수\n고려대학교 안암병원 정신건강의학과 교수\n고려대학교 안암병원 정신과 과장\n고려대학교 생명공학원 겸임교수
+	\n도서 ‘마음의 감기 치료법 우울증 119’ 저술\n주소: 서울 성북구 고려대로 73 (우)02841\n전화번호: 1577-0083"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="86dp"
+        android:text="이민수"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/psychiatry_leeminsoo" />
+
+</RelativeLayout>

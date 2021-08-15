@@ -3,13 +3,18 @@ package org.techtown.oasis.HospitalList.Child8;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import org.techtown.oasis.DoctorList.Fragment15;
+import org.techtown.oasis.DoctorList.Fragment16;
+import org.techtown.oasis.HospitalList.OnPersonItemClickListener;
 import org.techtown.oasis.HospitalList.Person;
 import org.techtown.oasis.HospitalList.PersonAdapter;
 import org.techtown.oasis.R;
@@ -35,6 +40,22 @@ public class FragmentChild5 extends Fragment {
         adapter.addItem(new Person(R.drawable.psychiatry_jeongdongcheong, "정동청", "서울청정신건강의학과의원 강남점", "", "대기 시간: 1시간"));
         adapter.addItem(new Person(R.drawable.psychiatry_kimbyungsoo, "김병수", "김병수 정신건강의학과 의원", "", "대기 시간: 40분"));
         recyclerView.setAdapter(adapter);
+
+        // 어댑터에 리스너 설정
+        adapter.setOnItemClickListener(new OnPersonItemClickListener() {
+            @Override
+            public void onItemClick(PersonAdapter.ViewHolder holder, View view, int position) {
+                Person item = adapter.getItem(position);  // 어댑터에 리스너 설정
+                Toast.makeText(getContext(), "의사 선택됨: " + item.getName(), Toast.LENGTH_SHORT).show();
+                if (position == 0) {
+                    Fragment16 fragment16 = new Fragment16();
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.container, fragment16);
+                    transaction.commit();
+                }
+            }
+        });
+
         return rootView;
     }
 }

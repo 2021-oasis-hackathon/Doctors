@@ -79,7 +79,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
         }
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;  // 의사 사진
         TextView textView;  // 의사 이름
         TextView textView2;  // 병원 이름
