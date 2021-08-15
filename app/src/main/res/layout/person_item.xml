@@ -47,12 +47,29 @@
                     android:textColor="#FF0000FF"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/textView3"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="거리"
-                    android:textSize="20sp"/>
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="대기 시간"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="거리"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

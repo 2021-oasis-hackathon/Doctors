@@ -3,6 +3,7 @@ package org.techtown.oasis.HospitalList;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -79,14 +80,19 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView;
-        TextView textView2;
+        ImageView imageView;  // 의사 사진
+        TextView textView;  // 의사 이름
+        TextView textView2;  // 병원 이름
+        TextView textView3;  // 병원 거리
+        TextView textView4;  // 대기 시간
 
         public ViewHolder(View itemView, final OnPersonItemClickListener listener) {
             super(itemView);
-
+            imageView = itemView.findViewById(R.id.imageView);
             textView = itemView.findViewById(R.id.textView);
             textView2 = itemView.findViewById(R.id.textView2);
+            textView3 = itemView.findViewById(R.id.textView3);
+            textView4 = itemView.findViewById(R.id.textView4);
 
             itemView.setOnClickListener(new View.OnClickListener() {
 
@@ -102,8 +108,11 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
         }
 
         public void setItem(Person item) {
+            imageView.setImageResource(item.getImageResId());
             textView.setText(item.getName());
-            textView2.setText(item.getMobile());
+            textView2.setText(item.getHospitalName());
+            textView3.setText(item.getDistance());
+            textView4.setText(item.getWaitingTime());
         }
     }
 }

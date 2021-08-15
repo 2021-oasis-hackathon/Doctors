@@ -6,7 +6,7 @@
     tools:context=".HospitalList.Child10.FragmentChild8">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerView5"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
