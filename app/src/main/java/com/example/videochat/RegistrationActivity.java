@@ -7,12 +7,18 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -52,13 +58,13 @@ public class RegistrationActivity extends AppCompatActivity {
         ccp = (CountryCodePicker) findViewById(R.id.ccp);
         ccp.registerCarrierNumberEditText(phoneText);
 
-        continueAndNextBtn.setOnClickListner(new View.OnClickListener() {
+        continueAndNextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (continueAndNextBtn.getText().equals("submit") || checker.equals("Code Sent")) {
 
-                    string verificationCode = codeText.getText().toString();
+                    String verificationCode = codeText.getText().toString();
 
                     if(verificationCode.equals("")){
 
@@ -67,15 +73,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
                     else{
 
-                        loadingBar.setTitle("Code Verification");
-                        loadingBar.setMessage("Please Wait, While Verifying~");
+                        loadingBar.setTitle("Code Verification...");
+                        loadingBar.setMessage("Please Wait, While verifying...");
                         loadingBar.setCanceledOnTouchOutside(false);
                         loadingBar.show();
 
                         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId,verificationCode);
 
-                        signInWithPhoneAuthCredential(credential);
-
+                        SignInWithPhoneAuthCredential(credential);
 
                     }
 
@@ -88,7 +93,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     if (!phoneNumber.equals("")) {
 
                          loadingBar.setTitle("Phone Number Verification");
-                         loadingBar.setMessage("Please Wait, While Varifying~");
+                         loadingBar.setMessage("Please Wait, While verifying~");
                          loadingBar.setCanceledOnTouchOutside(false);
                          loadingBar.show();
 
@@ -100,23 +105,11 @@ public class RegistrationActivity extends AppCompatActivity {
                                  mCallbacks);
 
 
-
-
-
-
-
-
-
-
-
-
                     } else {
 
                         Toast.makeText(RegistrationActivity.this, "Please Check your Phone Number", Toast.LENGTH_SHORT).show();
 
-
                     }
-
 
                 }
 
@@ -129,7 +122,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
 
-                signInWithPhoneAuthCredential(phoneAuthCredential);
+                SignInWithPhoneAuthCredential(phoneAuthCredential);
 
 
             }
@@ -137,7 +130,9 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
 
-                Toast.makeText(RegistrationActivity.this, "Invaild Phone Number", Toast.LENGTH_SHORT).show();
+                loadingBar.dismiss();
+
+                Toast.makeText(RegistrationActivity.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
                 relativeLayout.setVisibility(View.VISIBLE);
 
 
@@ -154,7 +149,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 mResendToken = forceResendingToken;
 
                 relativeLayout.setVisibility(View.GONE);
-                checker ="Code Sent";
+                checker = "Code Sent";
                 continueAndNextBtn.setText("Submit");
                 codeText.setVisibility(View.VISIBLE);
 
@@ -166,53 +161,51 @@ public class RegistrationActivity extends AppCompatActivity {
         };
     }
 
+    private void SignInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            loadingBar.dismiss();
+                            sendUserToMainActivity();
+
+                            Toast.makeText(RegistrationActivity.this, "Nice", Toast.LENGTH_SHORT).show();
+
+
+                        } else {
+                            loadingBar.dismiss();
+                            String e = task.getException().toString();
+                            Toast.makeText(RegistrationActivity.this, "Error:" + e, Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+
+    }
+
+
+    private void sendUserToMainActivity() {
+        Intent intent = new Intent(RegistrationActivity.this, ContactsActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+
     @Override
     protected  void onStart() {
         super.onStart();
 
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        if(firebaseUser != null){
+        if (firebaseUser != null) {
 
             Intent homeIntent = new Intent(RegistrationActivity.this, ContactsActivity.class);
             startActivity(homeIntent);
             finish();
-    }
+        }
+    }}
 
 
-    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            
-                            loadingBar.dismiss();
-                            sendUserToMainActivity();
 
-                            Toast.makeText(RegistrationActivity.this,, "Nice", Toast.LENGTH_SHORT).show();
-
-
-                        } else {
-                            loadingBar.dismiss();
-                            String e = task.getException().toString();
-
-
-                            Toast.makeText(RegistrationActivity.this, "Error:"+e, Toast.LENGTH_SHORT).show();
-                            
-                            }
-                        }
-                    }
-                });
-    }
-
-    private void sendUserToMainActivity(){
-
-        Intent intent = new Intent (RegistrationActivity.this, ContactsActivity.this, ContactsActivity.class);
-        startActivity(intent);
-        finish();
-
-
-    }
-
-}

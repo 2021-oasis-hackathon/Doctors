@@ -28,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
@@ -56,7 +57,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         saveBtn = findViewById(R.id.save_settings_btn);
         userNameEt = findViewById(R.id.username_settings);
-        userBioEt = findViewById(R.id.bio_settings;
+        userBioEt = findViewById(R.id.bio_settings);
         profileImageView = findViewById(R.id.settings_profile_image);
         progressDialog = new ProgressDialog(this);
 
@@ -78,6 +79,9 @@ public class SettingsActivity extends AppCompatActivity {
                 saveUserData();
             }
         });
+
+        retrieveUserInfo();
+
 
         }
 
@@ -276,6 +280,8 @@ public class SettingsActivity extends AppCompatActivity {
 
                             userNameEt.setText(nameDb);
                             userBioEt.setText(bioDb);
+
+                            Picasso.get().load(imageDb).placeholder(R.drawable.profile_image).into(profileImageView);
                         }
                     }
 

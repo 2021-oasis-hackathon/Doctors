@@ -26,7 +26,6 @@ public class NotificationsActivity extends AppCompatActivity {
         notifications_list.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
     }
 
-
     public static class NotificationsViewHolder extends RecyclerView.ViewHolder {
 
         TextView userNameTxt;
@@ -46,6 +45,5 @@ public class NotificationsActivity extends AppCompatActivity {
             cardView = itemView.findViewById(R.id.card_view);
         }
     }
-
 
 }

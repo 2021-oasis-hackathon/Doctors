@@ -52,7 +52,9 @@
         android:layout_height="match_parent"
         android:id="@+id/notification_list"
         android:layout_below="@+id/app_bar_layout_contacts"
-        android:layout_above="@+id/nav_view">
+        android:layout_above="@+id/nav_view"
+        tools:ignore="UnknownIdInLayout" />
+
 
 
 
