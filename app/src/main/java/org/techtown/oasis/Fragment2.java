@@ -17,7 +17,13 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import org.techtown.oasis.HospitalList.Fragment10;
+import org.techtown.oasis.HospitalList.Fragment11;
+import org.techtown.oasis.HospitalList.Fragment12;
+import org.techtown.oasis.HospitalList.Fragment13;
+import org.techtown.oasis.HospitalList.Fragment14;
 import org.techtown.oasis.HospitalList.Fragment8;
+import org.techtown.oasis.HospitalList.Fragment9;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,9 +70,8 @@ public class Fragment2 extends Fragment {
 
         return rootView;
     }
-
+    // 검색 창 구현
     private void initUI(ViewGroup rootView) {
-        // 검색 창 구현
         editSearch = (EditText) rootView.findViewById(R.id.editSearch);
         listView = (ListView) rootView.findViewById(R.id.listView);
         // listView.setVisibility(View.INVISIBLE); // 리스트 뷰 숨김
@@ -118,24 +123,70 @@ public class Fragment2 extends Fragment {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                int i;
                 boolean b = false;
                 String searchedText = editSearch.getText().toString();
 
-                for (int i = 0; i < arraylist.size(); i++) {
+                for (i = 0; i < arraylist.size(); i++) {
                     //Toast.makeText(getContext(), arraylist.get(i), Toast.LENGTH_SHORT).show();
                     // 리스트에 있는 단어를 검색했으면
                     if (searchedText.equals(arraylist.get(i))) {
                         b = true;
+                        break;
                     }
                 }
-                if (b) {
-                    // 의사 리스트 화면으로 전환(fragment_8)
-                    Fragment8 fragment8 = new Fragment8();
-                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.container, fragment8);
-                    transaction.commit();
-                } else {
+                if (b) {  // 의사 리스트 화면으로 전환(fragment_8~14)
+
+                    if (searchedText.equals("수면장애")) {
+                        SpecialFragment specialFragment = new SpecialFragment();
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, specialFragment);
+                        transaction.commit();
+                    }
+                    else if (i < 50) {
+                        Fragment8 fragment8 = new Fragment8();
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment8);
+                        transaction.commit();
+                    }
+                    else if (i < 100) {
+                        Fragment9 fragment9 = new Fragment9();
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment9);
+                        transaction.commit();
+                    }
+                    else if (i < 130) {
+                        Fragment10 fragment10 = new Fragment10();
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment10);
+                        transaction.commit();
+                    }
+                    else if (i < 180) {
+                        Fragment11 fragment11 = new Fragment11();
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment11);
+                        transaction.commit();
+                    }
+                    else if (i < 230) {
+                        Fragment12 fragment12 = new Fragment12();
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment12);
+                        transaction.commit();
+                    }
+                    else if (i < 245) {
+                        Fragment13 fragment13 = new Fragment13();
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment13);
+                        transaction.commit();
+                    }
+                    else {
+                        Fragment14 fragment14 = new Fragment14();
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment14);
+                        transaction.commit();
+                    }
+                }
+                else {
                     Toast.makeText(getContext(), "검색어를 다시 입력해주세요", Toast.LENGTH_SHORT).show();
                 }
             }

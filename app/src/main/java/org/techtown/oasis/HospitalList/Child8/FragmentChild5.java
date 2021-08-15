@@ -29,10 +29,11 @@ public class FragmentChild5 extends Fragment {
 
         // recyclerView에 어댑터 설정
         adapter = new PersonAdapter();
-        adapter.addItem(new Person(R.drawable.psychiatry_kimhoon, "김훈", "김훈신경정신과의원", "", "대기 시간: 30분"));
-        adapter.addItem(new Person(R.drawable.psychiatry_kangjieon, "강지언", "성모정신건강의학과의원", "", "대기 시간: 1시간"));
-        adapter.addItem(new Person(R.drawable.psychiatry_hankyungho, "한경호", "명정신건강의학과", "", "대기 시간: 40분"));
-
+        adapter.addItem(new Person(R.drawable.psychiatry_leeminsoo, "이민수", "고려대학교 안암병원", "", "대기 시간: 30분"));
+        adapter.addItem(new Person(R.drawable.psychiatry_hanseolhee, "한설희", "건국대학교병원", "", "대기 시간: 1시간"));
+        adapter.addItem(new Person(R.drawable.psychiatry_jeongdoeon, "정도언", "서울대병원", "", "대기 시간: 40분"));
+        adapter.addItem(new Person(R.drawable.psychiatry_jeongdongcheong, "정동청", "서울청정신건강의학과의원 강남점", "", "대기 시간: 1시간"));
+        adapter.addItem(new Person(R.drawable.psychiatry_kimbyungsoo, "김병수", "김병수 정신건강의학과 의원", "", "대기 시간: 40분"));
         recyclerView.setAdapter(adapter);
         return rootView;
     }
