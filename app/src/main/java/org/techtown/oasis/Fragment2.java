@@ -12,21 +12,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import org.techtown.oasis.HospitalList.Fragment8;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Fragment2 extends Fragment {
-
-    private List<String> list;          // 데이터를 넣은 리스트
-    private ListView listView;          // 검색 리스트
-    private EditText editSearch;        // 검색어를 입력할 Input 창
-    private SearchAdapter adapter;      // 리스트 뷰에 연결할 어댑터
+    // 데이터를 넣은 리스트
+    private List<String> list;
+    // 검색 리스트
+    private ListView listView;
+    // 검색어를 입력할 입력창
+    private EditText editSearch;
+    // 리스트 뷰에 연결할 어댑터
+    private SearchAdapter adapter;
     private ArrayList<String> arraylist;
     Context context;
 
@@ -72,9 +76,9 @@ public class Fragment2 extends Fragment {
 
         // 검색에 사용할 데이터을 검색 전에 저장
         settingList();
-
-        // 리스트의 모든 데이터를 arraylist에 복사
+        
         arraylist = new ArrayList<String>();
+        // 리스트의 모든 데이터를 arraylist에 넣기
         arraylist.addAll(list);
 
         // 리스트에 연동될 어댑터 생성
@@ -91,15 +95,14 @@ public class Fragment2 extends Fragment {
             }
         });
 
-        // input창에 검색어를 입력시 "addTextChangedListener" 이벤트 리스너를 정의
+        // addTextChangedListener
         editSearch.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            public void beforeTextChanged(CharSequence charSequence, int a, int b, int c) {
             }
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
+            public void onTextChanged(CharSequence charSequence, int a, int b, int c) {
             }
 
             @Override
@@ -155,7 +158,7 @@ public class Fragment2 extends Fragment {
 
     // 검색을 수행하는 메소드
     public void search(String charText) {
-        // 문자 입력시마다 리스트를 지운 후 다시 나타냄
+        // 문자 입력시마다 리스트를 지움
         list.clear();
 
         if (charText.length() == 0) {
@@ -164,7 +167,7 @@ public class Fragment2 extends Fragment {
         else {
             // 문자 입력을 할 때 리스트의 모든 데이터를 검색
             for(int i = 0; i < arraylist.size(); i++) {
-                // arraylist의 데이터 중 입력받은 단어(charText)가 포함되어 있으면 검색된 데이터를 리스트에 추가
+                // arraylist의 data 중에서 입력받은 단어가 포함되어 있으면 검색된 데이터를 리스트에 추가
                 if (arraylist.get(i).toLowerCase().contains(charText)) {
                     list.add(arraylist.get(i));
                 }

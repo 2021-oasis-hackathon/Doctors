@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="HospitalList.Fragment9">
+    tools:context="HospitalList.Fragment10">
 
     <TextView
         android:id="@+id/textView8"
@@ -22,7 +22,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout4"
+            android:id="@+id/tabLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/purple_200"
@@ -34,7 +34,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager4"
+        android:id="@+id/viewPager5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="0dp"

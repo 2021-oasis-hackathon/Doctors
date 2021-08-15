@@ -1,4 +1,4 @@
-package org.techtown.oasis;
+package org.techtown.oasis.HospitalList.Child8;
 
 import android.os.Bundle;
 
@@ -8,12 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Fragment9 extends Fragment {
+import org.techtown.oasis.R;
+
+public class FragmentChild4 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_9, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_child4, container, false);
+
+
+        return rootView;
     }
 }
