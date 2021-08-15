@@ -7,6 +7,33 @@
     tools:context=".DoctorList.Fragment15">
 
     <TextView
+        android:id="@+id/phoneNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="300dp"
+        android:text="061-542-7727"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="300dp"
+        android:text="전화번호:"
+        android:textSize="20sp" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -24,7 +51,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="178dp"
-        android:text="소속: 현대의원\n경력: 전남대학교 대학원 의학 박사\n주소: 전남 진도군 지산면 지산로 1184 (지산면 인지리)\n전화번호: 061-542-7727"
+        android:text="소속: 현대의원\n경력: 전남대학교 대학원 의학 박사\n주소: 전남 진도군 지산면 지산로 1184 (지산면 인지리)"
         android:textSize="20sp"
         android:layout_alignParentLeft="true" />
 
