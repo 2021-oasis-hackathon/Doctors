@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
 
-import org.techtown.oasis.ChildFragment.FragmentChild1;
-import org.techtown.oasis.ChildFragment.FragmentChild2;
+import org.techtown.oasis.HospitalList.Child9.FragmentChild6;
+import org.techtown.oasis.HospitalList.Child9.FragmentChild7;
 import org.techtown.oasis.R;
 import org.techtown.oasis.ViewPagerAdapter;
 
@@ -35,8 +35,8 @@ public class Fragment9 extends Fragment {
         tabLayout = view.findViewById(R.id.tabLayout4);
         viewPager = view.findViewById(R.id.viewPager4);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new FragmentChild1(), "내 주변");
-        adapter.addFragment(new FragmentChild2(), "인기");
+        adapter.addFragment(new FragmentChild6(), "내 주변");
+        adapter.addFragment(new FragmentChild7(), "인기");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }
