@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".result.diagnosis_result"
+    tools:ignore="OnClick">
+
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="416dp"
+        android:onClick="onClick"
+        android:text="처방전 확인하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="292dp"
+        android:onClick="onClick"
+        android:text="병원 예약하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

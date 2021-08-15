@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon/app/src/main/res/layout/activity_diagnosis_result.xml" value="0.32608695652173914" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon/app/src/main/res/layout/activity_main.xml" value="0.32608695652173914" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon/app/src/main/res/layout/activity_prescription.xml" value="0.32608695652173914" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon/app/src/main/res/layout/activity_prescrption.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon/app/src/main/res/layout/activity_videocall.xml" value="0.10435663627152988" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon/app/src/main/res/layout/photo_activity.xml" value="0.32608695652173914" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_diagnosis_result.xml" value="0.1984375" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/drawable/ic_launcher_background.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/drawable/memo_border.xml" value="0.2796296296296296" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/drawable/photo.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/layout/activity_main_.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/layout/androidmanifest.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/layout/layout.xml" value="0.25" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/layout/photo_activity.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/hello/app/src/main/res/xml/file_paths.xml" value="0.36614583333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
