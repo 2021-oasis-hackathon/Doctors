@@ -14,7 +14,8 @@
         android:theme="@style/Theme.Hello">
         <activity
             android:name=".result.benefit_detail"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".result.benefits"/>
         <activity
             android:name=".result.benefits"
             android:exported="true" />

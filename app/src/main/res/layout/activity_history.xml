@@ -8,18 +8,16 @@
     tools:ignore="UnknownIdInLayout">
 
 
-
-
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="421dp"
-        android:layout_height="181dp"
+        android:layout_width="415dp"
+        android:layout_height="156dp"
         android:background="@color/gray"
         android:text="@string/textView3"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -283,6 +281,7 @@
         app:layout_constraintVertical_bias="0.333"
         tools:ignore="MissingConstraints" />
 
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="373dp"
@@ -291,35 +290,33 @@
         android:layout_marginEnd="23dp"
         android:background="@drawable/box2"
         android:text="@string/textView4"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView56"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312"
-        tools:ignore="MissingConstraints"
+        app:layout_constraintVertical_bias="0.901"
 
-    />
-
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView62"
         android:layout_width="63dp"
         android:layout_height="19dp"
         android:background="@drawable/box6"
+        android:elevation="10dp"
         android:gravity="center"
         android:text="@string/textView41"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="12dp"
-        android:elevation="10dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.632"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.366"
+        app:layout_constraintVertical_bias="0.369"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -327,19 +324,19 @@
         android:layout_width="63dp"
         android:layout_height="19dp"
         android:background="@drawable/box6"
+        android:elevation="10dp"
         android:gravity="center"
         android:text="@string/textView42"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="12dp"
-        android:elevation="10dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.867"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.367"
+        app:layout_constraintVertical_bias="0.369"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -353,33 +350,33 @@
         android:text="@string/textView4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.226"
+        app:layout_constraintVertical_bias="0.267"
         tools:ignore="MissingConstraints"
 
 
-    />
+        />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="63dp"
         android:layout_height="19dp"
         android:background="@drawable/box6"
+        android:elevation="10dp"
         android:gravity="center"
         android:text="@string/textView41"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="12dp"
-        android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.632"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView56"
+        app:layout_constraintEnd_toEndOf="@+id/textView56"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="@+id/textView56"
+        app:layout_constraintTop_toTopOf="@+id/textView56"
+        app:layout_constraintVertical_bias="0.84"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -387,19 +384,19 @@
         android:layout_width="63dp"
         android:layout_height="19dp"
         android:background="@drawable/box6"
+        android:elevation="10dp"
         android:gravity="center"
         android:text="@string/textView42"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="12dp"
-        android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.867"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView56"
+        app:layout_constraintEnd_toEndOf="@+id/textView56"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="@+id/textView56"
+        app:layout_constraintTop_toTopOf="@+id/textView56"
+        app:layout_constraintVertical_bias="0.84"
         tools:ignore="MissingConstraints" />
 
     <TextView

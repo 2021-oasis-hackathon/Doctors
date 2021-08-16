@@ -23,7 +23,7 @@ public class videocall extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), diagnosis_result.class);
+                Intent intent = new Intent(getApplicationContext(), prescrption.class);
                 startActivity(intent);
             }
         });
