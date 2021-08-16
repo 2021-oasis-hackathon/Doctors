@@ -92,7 +92,7 @@
         android:shadowDx="2.0"
         android:shadowDy="2.0"
         android:shadowRadius="4.0"
-        android:text="@string/textView46"
+        android:text="@string/btn1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

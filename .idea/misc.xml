@@ -14,12 +14,14 @@
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/memo_border.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/outline.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/outline2.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/shadow.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_benefit_detail.xml" value="0.33" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_benefits.xml" value="0.25" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_diagnosis_result.xml" value="0.2046875" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_history.xml" value="0.33" />
-        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_prescrption.xml" value="0.2046875" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_prescrption.xml" value="0.33" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_prescrption_image.xml" value="0.2046875" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_videocall.xml" value="0.2046875" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_history.xml" value="0.36614583333333334" />
@@ -33,5 +35,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
   </component>
 </project>
