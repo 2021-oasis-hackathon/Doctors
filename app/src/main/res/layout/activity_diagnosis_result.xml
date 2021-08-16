@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".result.diagnosis_result"
-    tools:ignore="OnClick">
+    tools:ignore="OnClick"
+    tools:context=".result.diagnosis_result">
 
 
     <Button
-        android:id="@+id/btn6"
+        android:id="@+id/btn66"
         android:layout_width="160dp"
         android:layout_height="80dp"
         android:layout_marginEnd="124dp"

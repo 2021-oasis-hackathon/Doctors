@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">hello</string>
+    <string name="textView1">처방 받기 </string>
+    <string name="textView2">진단 결과에 따라 약을 배송 받거나 병원을 예약하세요. </string>
+    <string name="btn8">약 배송 </string>
+    <string name="btn9">병원 예약 </string>
+    <string name="btn100">처방전 보기 </string>
 </resources>

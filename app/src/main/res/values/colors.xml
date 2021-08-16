@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--팝업 배경-->
+    <color name="dialogColor">#A6333333</color>
+
+    <!--팝업창 테마-->
+    <style name="DialogTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/dialogColor</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
 </resources>

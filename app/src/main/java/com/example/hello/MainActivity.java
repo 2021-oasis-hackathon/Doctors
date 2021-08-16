@@ -1,31 +1,21 @@
 package com.example.hello;
 
-import android.net.Uri;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Environment;
+import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
-
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.ImageDecoder;
-import android.provider.MediaStore;
-import android.widget.ImageView;
 
 import com.example.hello.result.videocall;
-
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button2;         // 끝남 버튼
     Button button3;
     ImageView imageView;
+
+
 
 
     @Override

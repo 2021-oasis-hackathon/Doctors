@@ -4,34 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".result.prescrption"
-    tools:ignore="UnknownIdInLayout">
+    tools:ignore="UnknownIdInLayout"
+    tools:context=".result.prescrption">
 
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginStart="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589"
-        app:srcCompat="@drawable/face" />
 
     <Button
-        android:id="@+id/btn8"
-        android:layout_width="166dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="36dp"
+        android:id="@+id/btn100"
+        android:layout_width="270dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="280dp"
         android:onClick="onClick"
-        android:text="약 배달 신청하기"
+        android:text="@string/btn100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="@+id/textView"
         tools:ignore="MissingConstraints,OnClick" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="144dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="380dp"
+        android:onClick="onClick"
+        android:text="@string/btn8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn9"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        tools:ignore="MissingConstraints,NotSibling,OnClick" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="144dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="380dp"
+        android:onClick="onClick"
+        android:text="@string/btn9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="296dp"
+        android:layout_marginBottom="92dp"
+        android:text="@string/textView1"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="343dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/textView2"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
