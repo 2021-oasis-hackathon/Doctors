@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/memo_border"
         android:gravity="top|left"
-        android:hint="정확한 증상을 입력 해주세요."
+        android:hint="@string/edittext"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.615"

@@ -1,5 +1,8 @@
 package com.example.hello;
 
+import static com.example.hello.R.id.btn2;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -15,7 +18,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.hello.result.history;
+import com.example.hello.result.prescrption_image;
 import com.example.hello.result.videocall;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,29 +38,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button imageButton = (Button) findViewById(R.id.btn1);
-        imageButton.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), videocall.class);
-            startActivity(intent);
-        });
+
 
         // 뷰 지정
-        edittext = (EditText) findViewById(R.id.edittext);
-        textView = (TextView) findViewById(R.id.textView);
-        button1 = (Button) findViewById(R.id.btn1);
-        button2 = (Button) findViewById(R.id.btn2);
-        button3 = (Button) findViewById(R.id.btn3);
+        edittext = findViewById(R.id.edittext);
+        textView = findViewById(R.id.textView);
+        button1 =  findViewById(R.id.btn1);
+        button2 =  findViewById(R.id.btn2);
+        button3 =  findViewById(R.id.btn3);
+
+
 
         // 디자인 정의
-        button3 = (Button) findViewById(R.id.btn3);
-        imageView = (ImageView) findViewById(R.id.imageView1);
+        button3 =  findViewById(R.id.btn3);
+        imageView =  findViewById(R.id.imageView1);
         button3.setOnClickListener(this);
+
+
 
 
         edittext.addTextChangedListener(new TextWatcher() {
@@ -66,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 edittext.setFilters(filter);
 
                 int currentBytes = s.toString().getBytes().length;        // 텍스트 내용을 받아와서 바이트 수를 가져온다.
-                String txt = String.valueOf(currentBytes) + " / 500 바이트";
+                String txt = currentBytes + " / 500 바이트";
                 textView.setText(txt);                                           // 텍스트뷰에 현재 바이트수 표시
             }
 
@@ -76,15 +85,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+
+    @SuppressLint("NonConstantResourceId")
     public void onClick(View view) {
-        //버튼 ID호출
+        ///버튼 ID호출
         switch (view.getId()) {
             case R.id.btn1:
                 //btn1을 눌렀을 때의 이벤트 처리(화상진료)
 
+                Button imageButton =  button1;
+                imageButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), videocall.class);
+                        startActivity(intent);
+                                                   }
+
+
+                });
                 break;
             //btn2을 눌렀을 때의 이벤트 처리(진료예약)
             case R.id.btn2:
+
+
 
                 break;
 

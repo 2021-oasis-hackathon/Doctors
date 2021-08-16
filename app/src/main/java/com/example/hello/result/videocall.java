@@ -18,7 +18,7 @@ public class videocall extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_videocall);
 
-        Button imageButton = (Button) findViewById(R.id.btn11);
+        Button imageButton = findViewById(R.id.btn11);
         imageButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

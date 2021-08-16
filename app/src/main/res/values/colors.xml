@@ -21,4 +21,17 @@
         <item name="android:windowAnimationStyle">@null</item>
     </style>
 
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#6DE0CC</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+        <item name="colorAccent">@color/darkgray</item>
+    </style>
+
 </resources>
+
+
+
+
+

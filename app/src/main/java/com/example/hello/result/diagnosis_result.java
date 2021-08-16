@@ -19,7 +19,7 @@ public class diagnosis_result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diagnosis_result);
 
-        Button imageButton = (Button) findViewById(R.id.btn66);
+        Button imageButton = findViewById(R.id.btn66);
         imageButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

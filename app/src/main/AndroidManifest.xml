@@ -14,7 +14,9 @@
         android:theme="@style/Theme.Hello">
         <activity
             android:name=".result.history"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+        />
         <activity
             android:name=".result.prescrption"
             android:exported="true" />

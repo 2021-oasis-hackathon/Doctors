@@ -13,14 +13,13 @@ import com.example.hello.R;
 public class prescrption extends AppCompatActivity {
 
 
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prescrption);
 
-        Button imageButton = (Button) findViewById(R.id.btn100);
+
+        Button imageButton = findViewById(R.id.btn100);
         imageButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
