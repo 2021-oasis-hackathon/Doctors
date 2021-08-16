@@ -13,6 +13,11 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.yanzhenjie.permission.Action;
+import com.yanzhenjie.permission.AndPermission;
+import com.yanzhenjie.permission.runtime.Permission;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements org.techtown.oasis.OnTabItemSelectedListener {
 
@@ -67,6 +72,22 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
                         return false;
                     }
                 });
+        AndPermission.with(this)
+                .runtime()
+                .permission(
+                        Permission.ACCESS_FINE_LOCATION,
+                        Permission.ACCESS_COARSE_LOCATION)
+                .onGranted(new Action<List<String>>() {
+                    @Override
+                    public void onAction(List<String> permissions) {
+                    }
+                })
+                .onDenied(new Action<List<String>>() {
+                    @Override
+                    public void onAction(List<String> permissions) {
+                    }
+                })
+                .start();
 
         Button myButton = findViewById(R.id.myButton);
         myButton.setOnClickListener(new View.OnClickListener() {
