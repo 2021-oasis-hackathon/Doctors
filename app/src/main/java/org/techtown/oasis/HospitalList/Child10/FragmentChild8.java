@@ -26,8 +26,13 @@ import org.techtown.oasis.HospitalList.Person;
 import org.techtown.oasis.HospitalList.PersonAdapter;
 import org.techtown.oasis.R;
 
+import java.text.DecimalFormat;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collector;
 
 import static androidx.core.content.ContextCompat.getSystemService;
 
@@ -36,10 +41,10 @@ public class FragmentChild8 extends Fragment {
     RecyclerView recyclerView;
     PersonAdapter adapter;
 
-    String text1;  // 내 위치
-    String dText1, dText2, dText3, dText4, dText5; // 병원 거리 텍스트
+    //String dText1, dText2, dText3, dText4, dText5; // 병원 거리 텍스트
     // 병원 거리
-    double distance1, distance2, distance3, distance4, distance5;
+    double distance1, distance2, distance3, distance4, distance5; // 미터 단위
+    double dk1, dk2, dk3, dk4, dk5; // 킬로미터 단위
 
     // 내 위치
     Location locationA = new Location("point A");
@@ -73,20 +78,58 @@ public class FragmentChild8 extends Fragment {
 
         startLocationService();  // 위치 계산 서비스
 
-        dText1 = Double.toString(distance1);
-        dText2 = Double.toString(distance2);
-        dText3 = Double.toString(distance3);
-        dText4 = Double.toString(distance4);
-        dText5 = Double.toString(distance5);
+        // distanceTo는 미터 단위로 값을 리턴하므로 1000으로 나누어 km로 변환
+        dk1 = Math.round((distance1 / 1000));
+        dk2 = Math.round((distance2 / 1000));
+        dk3 = Math.round((distance3 / 1000));
+        dk4 = Math.round((distance4 / 1000));
+        dk5 = Math.round((distance5 / 1000));
+
+        /*
+        dText1 = dk1 + " km";
+        dText2 = dk2 + " km";
+        dText3 = dk3 + " km";
+        dText4 = dk4 + " km";
+        dText5 = dk5 + " km";
+*/
+
+        adapter = new PersonAdapter();
+        /*
+        if ((distance1 <= distance2) && (distance1 <= distance3) && (distance1 <= distance4) && (distance1 <= distance5)) {
+            adapter.addItem(new Person(R.drawable.dermatology_parkkibum, "박기범", "현대의원", dText1, "대기 시간: 30분"));
+        }
+        else if ((distance2 <= distance3) && (distance2 <= distance4) && (distance2 <= distance5)) {
+            adapter.addItem(new Person(R.drawable.dermatology_kwonohsang, "권오상", "효사랑의원", dText2, "대기 시간: 1시간"));
+        }
+        else if ((distance3 <= distance4) && (distance3 <= distance5)) {
+            adapter.addItem(new Person(R.drawable.dermatology_yoonjaeil, "윤재일", "연합의원", dText3, "대기 시간: 40분"));
+        }
+        else if (distance4 <= distance5) {
+            adapter.addItem(new Person(R.drawable.dermatology_seoseongjun, "서성준", "세종의원", dText4, "대기 시간: 2시간"));
+        }
+        else {
+            adapter.addItem(new Person(R.drawable.dermatology_gowooseok, "고우석", "성심의원", dText5, "대기 시간: 3시간"));
+        }
+        recyclerView.setAdapter(adapter);
+         */
+
 
         // recyclerView에 어댑터 설정
         // 피부과
-        adapter = new PersonAdapter();
-        adapter.addItem(new Person(R.drawable.dermatology_parkkibum, "박기범", "현대의원", dText1, "대기 시간: 30분"));
-        adapter.addItem(new Person(R.drawable.dermatology_kwonohsang, "권오상", "효사랑의원", dText2, "대기 시간: 1시간"));
-        adapter.addItem(new Person(R.drawable.dermatology_yoonjaeil, "윤재일", "연합의원", dText3, "대기 시간: 40분"));
-        adapter.addItem(new Person(R.drawable.dermatology_seoseongjun, "서성준", "세종의원", dText4, "대기 시간: 2시간"));
-        adapter.addItem(new Person(R.drawable.dermatology_gowooseok, "고우석", "성심의원", dText5, "대기 시간: 3시간"));
+        Person person1 = new Person(R.drawable.dermatology_parkkibum, "박기범", "현대의원", dk1, "대기 시간: 30분");
+        Person person2 = new Person(R.drawable.dermatology_kwonohsang, "권오상", "효사랑의원", dk2, "대기 시간: 1시간");
+        Person person3 = new Person(R.drawable.dermatology_yoonjaeil, "윤재일", "연합의원", dk3, "대기 시간: 40분");
+        Person person4 = new Person(R.drawable.dermatology_seoseongjun, "서성준", "세종의원", dk4, "대기 시간: 2시간");
+        Person person5 = new Person(R.drawable.dermatology_gowooseok, "고우석", "성심의원", dk5, "대기 시간: 3시간");
+
+        ArrayList<Person> personArrayList = new ArrayList<Person>();
+        personArrayList.add(person1);
+        personArrayList.add(person2);
+        personArrayList.add(person3);
+        personArrayList.add(person4);
+        personArrayList.add(person5);
+        Collections.sort(personArrayList, sortByTotalCall);
+        adapter.addItem(personArrayList);
         recyclerView.setAdapter(adapter);
 
         // 어댑터에 리스너 설정
@@ -168,5 +211,15 @@ public class FragmentChild8 extends Fragment {
     public void onProviderEnabled(String provider) { }
 
     public void onStatusChanged(String provider, int status, Bundle extras) { }
+
+
+    // PersonArray 정렬을 위한 Comparator
+    public static Comparator<Person> sortByTotalCall = new Comparator<Person>() {
+
+        @Override
+        public int compare(Person o1, Person o2) {
+            return Double.compare(o1.getDistance(), o2.getDistance());
+        }
+    };
 
 }

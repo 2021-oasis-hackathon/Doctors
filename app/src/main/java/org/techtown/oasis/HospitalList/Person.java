@@ -4,10 +4,10 @@ public class Person {
     private int imageResId;
     private String name;
     private String hospitalName;
-    private String distance;
+    private double distance;
     private String waitingTime;
 
-    public Person(int imageResId,String name, String hospitalName,String distance, String waitingTime) {
+    public Person(int imageResId,String name, String hospitalName, double distance, String waitingTime) {
         this.imageResId = imageResId;
         this.name = name;
         this.hospitalName = hospitalName;
@@ -37,11 +37,11 @@ public class Person {
         this.hospitalName = hospitalName;
     }
 
-    public String getDistance() {
+    public double getDistance() {
         return distance;
     }
 
-    public void setDistance(String distance) {
+    public void setDistance(double distance) {
         this.distance = distance;
     }
 

@@ -50,6 +50,12 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
         items.add(item);
     }
 
+    // arrayList에 객체를 arraylist로 추가
+    public void addItem(ArrayList<Person> arrayList) {
+        for (int i = 0; i < arrayList.size(); i++)
+        items.add(arrayList.get(i));
+    }
+
     // arrayList 전체를 설정
     public void setItems(ArrayList<Person> items) {
         this.items = items;
@@ -111,7 +117,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
             imageView.setImageResource(item.getImageResId());
             textView.setText(item.getName());
             textView2.setText(item.getHospitalName());
-            textView3.setText(item.getDistance());
+            textView3.setText(item.getDistance()+"");
             textView4.setText(item.getWaitingTime());
         }
     }

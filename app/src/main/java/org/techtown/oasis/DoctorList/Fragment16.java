@@ -22,9 +22,6 @@ public class Fragment16 extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_16, container, false);
 
-        TextView phoneNumber2 = rootView.findViewById(R.id.phoneNumber2);
-        String text2 = phoneNumber2.getText().toString();  // 전화 번호
-
         Button call_button2 = rootView.findViewById(R.id.call_button2);
         call_button2.setOnClickListener(new View.OnClickListener() {
             @Override

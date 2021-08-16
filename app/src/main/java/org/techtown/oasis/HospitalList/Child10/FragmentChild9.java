@@ -35,9 +35,9 @@ public class FragmentChild9 extends Fragment {
 
         // recyclerView에 어댑터 설정
         adapter = new PersonAdapter();
-        adapter.addItem(new Person(R.drawable.dermatology_leekwangjun, "이광준", "클린업피부과 대구범어점", "", "대기 시간: 30분"));
-        adapter.addItem(new Person(R.drawable.dermatology_kimhoonsoo, "김훈수", "예스병원", "", "대기 시간: 1시간"));
-        adapter.addItem(new Person(R.drawable.dermatology_leeseokjong, "이석종", "경북대학교병원", "", "대기 시간: 40분"));
+        adapter.addItem(new Person(R.drawable.dermatology_leekwangjun, "이광준", "클린업피부과 대구범어점", 1, "대기 시간: 30분"));
+        adapter.addItem(new Person(R.drawable.dermatology_kimhoonsoo, "김훈수", "예스병원", 3, "대기 시간: 1시간"));
+        adapter.addItem(new Person(R.drawable.dermatology_leeseokjong, "이석종", "경북대학교병원", 2, "대기 시간: 40분"));
         recyclerView.setAdapter(adapter);
 
         return rootView;
