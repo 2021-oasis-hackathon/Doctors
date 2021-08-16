@@ -1,6 +1,5 @@
 package com.example.hello;
 
-import static com.example.hello.R.id.btn2;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -49,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edittext = findViewById(R.id.edittext);
         textView = findViewById(R.id.textView);
         button1 =  findViewById(R.id.btn1);
-        button2 =  findViewById(R.id.btn2);
         button3 =  findViewById(R.id.btn3);
 
 
@@ -104,12 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 });
                 break;
-            //btn2을 눌렀을 때의 이벤트 처리(진료예약)
-            case R.id.btn2:
 
-
-
-                break;
 
             case R.id.btn3:
                 //btn3을 눌렀을 때의 이벤트 처리(증상을 보여주기 위해 사진촬영)

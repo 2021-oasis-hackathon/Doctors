@@ -8,74 +8,146 @@
     android:privateImeOptions="defaultInputmode=korean">
 
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="2.0"
+        android:text="@string/textView43"
+        android:textColor="@color/text"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="2.0"
+        android:text="@string/textView44"
+        android:textColor="@color/text"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/edittext"
-        android:layout_width="379dp"
-        android:layout_height="326dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/memo_border"
-        android:gravity="top|left"
+        android:layout_width="343dp"
+        android:layout_height="229dp"
+        android:background="@drawable/box7"
+        android:gravity="center"
         android:hint="@string/edittext"
-        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/text3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147"
+        tools:ignore="RtlCompat" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
         android:text="0/500 바이트"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext" />
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:onClick="onClick"
-        android:text="진료예약"
+        android:textColor="@color/text4"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.828"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="160dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="343dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/base"
         android:onClick="onClick"
-        android:text="화상진료받기"
+        android:shadowColor="@color/black"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="4.0"
+        android:text="@string/textView46"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn3"
+        app:layout_constraintVertical_bias="0.341"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn3"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="45dp"
+        android:layout_width="103dp"
+        android:layout_height="42dp"
+        android:backgroundTint="@color/base"
         android:onClick="onClick"
+        android:shadowColor="@color/black"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="4.0"
         android:text="사진촬영"
-        app:layout_constraintBottom_toTopOf="@+id/btn2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="@+id/textView" />
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView1"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.069"
+        app:srcCompat="@drawable/img_6"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="45dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="2.0"
+        android:text="@string/textView45"
+        android:textColor="@color/text5"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.032" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
