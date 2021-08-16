@@ -54,6 +54,9 @@ import static androidx.core.content.ContextCompat.getSystemService;
 
 public class FragmentChild8 extends Fragment {
 
+    // 거리 순 정렬을 위한 스위치
+    int sw = 0;
+
     // 데이터를 넣은 리스트
     private List<String> list;
     // 검색 리스트
@@ -174,8 +177,6 @@ public class FragmentChild8 extends Fragment {
                         transaction.replace(R.id.container, fragmentMap3);
                         transaction.commit();
                     }
-                    else {
-                    }
                 }
                 else {
                     Toast.makeText(getContext(), "검색어를 다시 입력해주세요", Toast.LENGTH_SHORT).show();
@@ -195,7 +196,36 @@ public class FragmentChild8 extends Fragment {
         locationF.setLatitude(34.48086634748008);  // 위도
         locationF.setLongitude(126.26346172591514);  // 경도
 
+        // getArguments() 메소드로 번들 받기
+        Bundle bundle = getArguments();  // getArguments() 메소드로 번들 받기
+        if (bundle != null) {
+            sw = bundle.getInt("switch");  // 번들에서 int 받기
+        }
+
         startLocationService();  // 위치 계산 서비스
+        if (sw == 0) {  // 변경 x
+        }
+        else if (sw == 1) {
+            // A 위치에 위도, 경도 설정
+            locationA.setLatitude(34.48376633861544);  // 위도
+            locationA.setLongitude(126.25693440719049);  // 경도
+        }
+        else if (sw == 2) {
+            // A 위치에 위도, 경도 설정
+            locationA.setLatitude(34.47908458409323);  // 위도
+            locationA.setLongitude(126.05103752603114);  // 경도
+        }
+        else if (sw == 3) {
+            // A 위치에 위도, 경도 설정
+            locationA.setLatitude(34.482203846073475);  // 위도
+            locationA.setLongitude(126.26682461686529);  // 경도
+        }
+        // distanceTo 메소드로 거리 계산, 저장
+        distance1= locationA.distanceTo(locationB);
+        distance2 = locationA.distanceTo(locationC);
+        distance3 = locationA.distanceTo(locationD);
+        distance4 = locationA.distanceTo(locationE);
+        distance5 = locationA.distanceTo(locationF);
 
         // distanceTo는 미터 단위로 값을 리턴하므로 1000으로 나누어 km로 변환
         dk1 = Math.round((distance1 / 1000));
@@ -265,13 +295,6 @@ public class FragmentChild8 extends Fragment {
             mgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, gpsListener);
             Toast.makeText(getContext(), "내 위치 확인 요청함", Toast.LENGTH_SHORT).show();
 
-            // distanceTo 메소드로 거리 계산, 저장
-            distance1= locationA.distanceTo(locationB);
-            distance2 = locationA.distanceTo(locationC);
-            distance3 = locationA.distanceTo(locationD);
-            distance4 = locationA.distanceTo(locationE);
-            distance5 = locationA.distanceTo(locationF);
-
             /*
             String message = Double.toString(distance);
             Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
@@ -289,13 +312,6 @@ public class FragmentChild8 extends Fragment {
             // A 위치에 위도, 경도 설정
             locationA.setLatitude(latitude);
             locationA.setLongitude(longitude);
-
-            // distanceTo 메소드로 거리 계산, 갱신
-            distance1= locationA.distanceTo(locationB);
-            distance2 = locationA.distanceTo(locationC);
-            distance3 = locationA.distanceTo(locationD);
-            distance4 = locationA.distanceTo(locationE);
-            distance5 = locationA.distanceTo(locationF);
         }
     }
 
@@ -345,5 +361,4 @@ public class FragmentChild8 extends Fragment {
             list.add(stringArray[i]);
         }
     }
-
 }

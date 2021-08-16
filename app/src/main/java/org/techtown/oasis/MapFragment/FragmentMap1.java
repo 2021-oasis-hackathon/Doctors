@@ -50,8 +50,12 @@ public class FragmentMap1 extends Fragment implements OnMapReadyCallback {
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 정보 전달
+                Bundle bundle = new Bundle();  // bundle으로 값 전달
+                bundle.putInt("switch", 1); // bundle에 넘길 값 저장
                 FragmentChild8 fragmentChild8 = new FragmentChild8();
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentChild8.setArguments(bundle);  // bundle을 SecondFragment로 보낼 준비
                 transaction.replace(R.id.container, fragmentChild8);
                 transaction.commit();
             }
