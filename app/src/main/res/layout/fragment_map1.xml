@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/googleMap"
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="627dp">
+
+    </fragment>
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="위치 확인 완료!"
+        android:textSize="25sp" />
+
+</LinearLayout>

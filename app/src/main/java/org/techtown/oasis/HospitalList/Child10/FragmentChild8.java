@@ -11,20 +11,36 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.techtown.oasis.DoctorList.Fragment15;
 import org.techtown.oasis.DoctorList.Fragment16;
+import org.techtown.oasis.HospitalList.Fragment10;
+import org.techtown.oasis.HospitalList.Fragment11;
+import org.techtown.oasis.HospitalList.Fragment12;
+import org.techtown.oasis.HospitalList.Fragment13;
+import org.techtown.oasis.HospitalList.Fragment14;
 import org.techtown.oasis.HospitalList.Fragment8;
+import org.techtown.oasis.HospitalList.Fragment9;
 import org.techtown.oasis.HospitalList.OnPersonItemClickListener;
 import org.techtown.oasis.HospitalList.Person;
 import org.techtown.oasis.HospitalList.PersonAdapter;
+import org.techtown.oasis.MapFragment.FragmentMap1;
+import org.techtown.oasis.MapFragment.FragmentMap2;
+import org.techtown.oasis.MapFragment.FragmentMap3;
 import org.techtown.oasis.R;
+import org.techtown.oasis.SearchAdapter;
+import org.techtown.oasis.SpecialFragment;
 
 import java.text.DecimalFormat;
 import java.time.Instant;
@@ -38,13 +54,22 @@ import static androidx.core.content.ContextCompat.getSystemService;
 
 public class FragmentChild8 extends Fragment {
 
-    RecyclerView recyclerView;
-    PersonAdapter adapter;
+    // 데이터를 넣은 리스트
+    private List<String> list;
+    // 검색 리스트
+    private ListView listView;
+    // 검색어를 입력할 입력창
+    private EditText editSearch;
+    // 리스트 뷰에 연결할 어댑터
+    private SearchAdapter searchAdapter;
+    private ArrayList<String> arraylist;
 
-    //String dText1, dText2, dText3, dText4, dText5; // 병원 거리 텍스트
+    RecyclerView recyclerView;
+    PersonAdapter personAdapter;  // Person 객체를 담을 어댑터
+
     // 병원 거리
     double distance1, distance2, distance3, distance4, distance5; // 미터 단위
-    double dk1, dk2, dk3, dk4, dk5; // 킬로미터 단위
+    double dk1, dk2, dk3, dk4, dk5;  // 킬로미터 단위
 
     // 내 위치
     Location locationA = new Location("point A");
@@ -55,6 +80,9 @@ public class FragmentChild8 extends Fragment {
     Location locationE = new Location("point E");  // 세종의원 34.4384828462856, 126.28092445289826
     Location locationF = new Location("point F");  // 성심의원 34.48086634748008, 126.26346172591514
 
+    FragmentMap1 fragmentMap1 = new FragmentMap1();
+    FragmentMap2 fragmentMap2 = new FragmentMap2();
+    FragmentMap3 fragmentMap3 = new FragmentMap3();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,6 +93,97 @@ public class FragmentChild8 extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
+        // 검색 기능
+        editSearch = rootView.findViewById(R.id.editSearch);
+        listView = rootView.findViewById(R.id.listView);
+        // listView.setVisibility(View.INVISIBLE); // 리스트 뷰 숨김
+
+        // 리스트 생성
+        list = new ArrayList<String>();
+
+        // 검색에 사용할 데이터을 검색 전에 저장
+        settingList();
+
+        arraylist = new ArrayList<String>();
+        // 리스트의 모든 데이터를 arraylist에 넣기
+        arraylist.addAll(list);
+
+        // 리스트에 연동될 어댑터 생성
+        searchAdapter = new SearchAdapter(list, getContext());
+
+        // 리스트 뷰에 어댑터 연결
+        listView.setAdapter(searchAdapter);
+
+        // 리스트의 아이템 클릭시 동작
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                editSearch.setText(list.get(position));  // editText에 아이템의 텍스트 저장
+            }
+        });
+
+        // addTextChangedListener
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int a, int b, int c) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int a, int b, int c) {
+            }
+
+            @Override
+            // input창에 문자를 입력할 때마다 호출
+            public void afterTextChanged(Editable editable) {
+                String text = editSearch.getText().toString();
+                search(text);  // search 메소드 호출
+            }
+        });
+
+        // 검색 버튼
+        Button searchButton = rootView.findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int i;
+                boolean b = false;
+                String searchedText = editSearch.getText().toString();
+
+                for (i = 0; i < arraylist.size(); i++) {
+                    //Toast.makeText(getContext(), arraylist.get(i), Toast.LENGTH_SHORT).show();
+                    // 리스트에 있는 단어를 검색했으면
+                    if (searchedText.equals(arraylist.get(i))) {
+                        b = true;
+                        break;
+                    }
+                }
+                if (b) {  // 지도 화면으로 전환(fragment_map1~3)
+
+                    if (searchedText.equals("진도 대림 아파트")) {
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragmentMap1);
+                        transaction.commit();
+                    }
+                    else if (searchedText.equals("가사도 마을회관")) {
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragmentMap2);
+                        transaction.commit();
+                    }
+                    else if (searchedText.equals("진도 계명아파트")) {
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragmentMap3);
+                        transaction.commit();
+                    }
+                    else {
+                    }
+                }
+                else {
+                    Toast.makeText(getContext(), "검색어를 다시 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        // 위도 경도 셋팅
         locationB.setLatitude(34.42462432864825);  // 위도
         locationB.setLongitude(126.16622182591342);  // 경도
         locationC.setLatitude(34.40860316749597);  // 위도
@@ -85,34 +204,7 @@ public class FragmentChild8 extends Fragment {
         dk4 = Math.round((distance4 / 1000));
         dk5 = Math.round((distance5 / 1000));
 
-        /*
-        dText1 = dk1 + " km";
-        dText2 = dk2 + " km";
-        dText3 = dk3 + " km";
-        dText4 = dk4 + " km";
-        dText5 = dk5 + " km";
-*/
-
-        adapter = new PersonAdapter();
-        /*
-        if ((distance1 <= distance2) && (distance1 <= distance3) && (distance1 <= distance4) && (distance1 <= distance5)) {
-            adapter.addItem(new Person(R.drawable.dermatology_parkkibum, "박기범", "현대의원", dText1, "대기 시간: 30분"));
-        }
-        else if ((distance2 <= distance3) && (distance2 <= distance4) && (distance2 <= distance5)) {
-            adapter.addItem(new Person(R.drawable.dermatology_kwonohsang, "권오상", "효사랑의원", dText2, "대기 시간: 1시간"));
-        }
-        else if ((distance3 <= distance4) && (distance3 <= distance5)) {
-            adapter.addItem(new Person(R.drawable.dermatology_yoonjaeil, "윤재일", "연합의원", dText3, "대기 시간: 40분"));
-        }
-        else if (distance4 <= distance5) {
-            adapter.addItem(new Person(R.drawable.dermatology_seoseongjun, "서성준", "세종의원", dText4, "대기 시간: 2시간"));
-        }
-        else {
-            adapter.addItem(new Person(R.drawable.dermatology_gowooseok, "고우석", "성심의원", dText5, "대기 시간: 3시간"));
-        }
-        recyclerView.setAdapter(adapter);
-         */
-
+        personAdapter = new PersonAdapter();
 
         // recyclerView에 어댑터 설정
         // 피부과
@@ -128,15 +220,16 @@ public class FragmentChild8 extends Fragment {
         personArrayList.add(person3);
         personArrayList.add(person4);
         personArrayList.add(person5);
+        // 거리가 가까운 순서대로 정렬
         Collections.sort(personArrayList, sortByTotalCall);
-        adapter.addItem(personArrayList);
-        recyclerView.setAdapter(adapter);
+        personAdapter.addItem(personArrayList);
+        recyclerView.setAdapter(personAdapter);
 
         // 어댑터에 리스너 설정
-        adapter.setOnItemClickListener(new OnPersonItemClickListener() {
+        personAdapter.setOnItemClickListener(new OnPersonItemClickListener() {
             @Override
             public void onItemClick(PersonAdapter.ViewHolder holder, View view, int position) {
-                Person item = adapter.getItem(position);  // 어댑터에 리스너 설정
+                Person item = personAdapter.getItem(position);  // 어댑터에 리스너 설정
                 Toast.makeText(getContext(), "의사 선택됨: " + item.getName(), Toast.LENGTH_SHORT).show();
                 if (position == 0) {
                     Fragment15 fragment15 = new Fragment15();
@@ -221,5 +314,36 @@ public class FragmentChild8 extends Fragment {
             return Double.compare(o1.getDistance(), o2.getDistance());
         }
     };
+
+    // 검색을 수행하는 메소드
+    public void search(String charText) {
+        // 문자 입력시마다 리스트를 지움
+        list.clear();
+
+        if (charText.length() == 0) {
+            list.addAll(arraylist);
+        }
+        else {
+            // 문자 입력을 할 때 리스트의 모든 데이터를 검색
+            for(int i = 0; i < arraylist.size(); i++) {
+                // arraylist의 data 중에서 입력받은 단어가 포함되어 있으면 검색된 데이터를 리스트에 추가
+                if (arraylist.get(i).toLowerCase().contains(charText)) {
+                    list.add(arraylist.get(i));
+                }
+            }
+        }
+
+        // 리스트 데이터가 변경되었으므로 어댑터를 갱신해 검색된 데이터를 화면에 보여줌
+        searchAdapter.notifyDataSetChanged();
+    }
+
+    // 검색에 사용될 데이터를 리스트에 추가
+    private void settingList(){
+        String[] stringArray = {"진도 대림 아파트", "가사도 마을회관", "진도 계명아파트"};
+
+        for (int i = 0; i < stringArray.length; i++) {
+            list.add(stringArray[i]);
+        }
+    }
 
 }

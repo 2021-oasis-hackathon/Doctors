@@ -72,8 +72,8 @@ public class Fragment2 extends Fragment {
     }
     // 검색 창 구현
     private void initUI(ViewGroup rootView) {
-        editSearch = (EditText) rootView.findViewById(R.id.editSearch);
-        listView = (ListView) rootView.findViewById(R.id.listView);
+        editSearch = rootView.findViewById(R.id.editSearch);
+        listView = rootView.findViewById(R.id.listView);
         // listView.setVisibility(View.INVISIBLE); // 리스트 뷰 숨김
 
         // 리스트 생성
@@ -235,7 +235,7 @@ public class Fragment2 extends Fragment {
                 {"공황", "난독", "가위눌림", "거식증", "두근거림", "기억상실", "결벽","도벽"
                 ,"ADHD","몽유병","기면","무기력","몽상","공포","분노조절","망상","강박","먹토"
                 ,"발표공포증","만성피로","불면","불안","성욕","손떨림","수면장애","스트레스","식이장애",
-                        "악몽","알츠하이머","알코올중독","우울","입면장애","자폐","자해","잠꼬대","정신병",
+                        "악몽","알츠하이머","알코올 중독","우울","입면장애","자폐","자해","잠꼬대","정신병",
                         "정신분열","조울","조증","조현병","중독","치매","트라우마","포비아","폭식","피로","피해망상","환각", "환청","후유증"},
                 {
                         "귓볼", 	"난청", 	"갑상선", "구강", "목", 	"기침", 	"구내", 	"냄새", 	"가래", 	"부비동", 	"기관지", 	"비염", 	"부비", 	"귀", 	"설암", 	"미열", 	"고막", 	"볼거리", 	"비중격만곡증", 	"목젓", 	"성대", 	"수면무호흡증", 	"숨막힘", 	"악취", 	"안면마비", 	"알레르기", 	"염증", 	"외이", 	"이명", 	"이석증", 	"인두", 	"인후", 	"임파선", 	"임파선", 	"입냄새", 	"재채기", 	"중이염", 	"천식", 	"청각", 	"축농증", "치주", 	"침", 	"코", 	"코피", 	"콧구멍", "콧물", "편도", 	"혀", "후각", 	"후두"
