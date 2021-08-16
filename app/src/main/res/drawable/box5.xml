@@ -9,7 +9,7 @@
         android:topRightRadius="100dp"/>
     <stroke
         android:width="3dp"
-        android:color="@color/base" />
+        android:color="@color/darkgray" />
 
 
 </shape>

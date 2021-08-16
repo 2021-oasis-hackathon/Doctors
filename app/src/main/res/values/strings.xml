@@ -6,8 +6,8 @@
     <string name="textView4"> </string>
     <string name="textView5">지난 진료  </string>
     <string name="textView6">효사랑의원  </string>
-    <string name="textView7">피부과 </string>
-    <string name="textView8">홍길동 </string>
+    <string name="textView7">정신과 </string>
+    <string name="textView8">김훈 </string>
     <string name="textView13">현대의원 </string>
     <string name="textView14">2021.6.08 / 11:00 </string>
     <string name="textView9">2021.08.12 / 16:00</string>
@@ -32,6 +32,18 @@
     <string name="textView29">- 건강보험료 본인부담금 지원</string>
     <string name="textView30">- 직접 지원(별도 신청사항 없음)</string>
     <string name="textView31">- 전라남도 진도군 주민복지과 ☎ 061-540-3132</string>
+    <string name="textView32">정형외과 </string>
+    <string name="textView33">치과 </string>
+    <string name="textView34">혈압내과 </string>
+    <string name="textView35">안과 </string>
+    <string name="textView36">김훈신경정신과의원 </string>
+    <string name="textView37">☎ 061-244-5860 </string>
+    <string name="textView38">강지언 </string>
+    <string name="textView39">성모정신건강의학과의원 </string>
+    <string name="textView40">☎ 061-278-5875 </string>
+    <string name="textView41">예약 하기 </string>
+    <string name="textView42">정보 보기 </string>
+
 
 
     <string name="btn8">약 배송 </string>
