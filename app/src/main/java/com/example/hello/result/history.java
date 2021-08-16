@@ -7,21 +7,21 @@ import androidx.core.app.NavUtils;
 
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
 import com.example.hello.R;
 
 import java.util.Objects;
 
 public class history extends AppCompatActivity {
 
-    @Override
-    protected void onCreate( Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
 
-    }
+
 
 
     @Override

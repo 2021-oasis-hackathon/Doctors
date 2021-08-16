@@ -11,6 +11,29 @@
     <string name="textView13">현대의원 </string>
     <string name="textView14">2021.6.08 / 11:00 </string>
     <string name="textView9">2021.08.12 / 16:00</string>
+    <string name="textView10">중앙 </string>
+    <string name="textView11">지자체 </string>
+    <string name="textView12">의료급여임신·출산진료비지원 </string>
+    <string name="textView15">진도군 저소득주민 건강보험료 지원 </string>
+    <string name="textView16">치매 치료관리비 지원사업 </string>
+    <string name="textView17">한방 거동 불편자 가정방문진료 </string>
+    <string name="textView18">현재 위치 설정하기 </string>
+    <string name="textView19">지원대상 </string>
+    <string name="textView20">지원내용 </string>
+    <string name="textView21">신청방법  </string>
+    <string name="textView22">문의 </string>
+    <string name="textView23">- 건강보험료 부과일 현재 진도군에 주민등록을 두고 거주하는 저소득 주민으로서 국민건강보험료 부과금액이
+월별 보험료액의 하한 이상인 세대 </string>
+    <string name="textView24">- 65세이상 노인세대 </string>
+    <string name="textView25">- 장애인세대</string>
+    <string name="textView26">- 한부모가족세대 </string>
+    <string name="textView27">- 가정위탁세대 </string>
+    <string name="textView28">- 조손세대</string>
+    <string name="textView29">- 건강보험료 본인부담금 지원</string>
+    <string name="textView30">- 직접 지원(별도 신청사항 없음)</string>
+    <string name="textView31">- 전라남도 진도군 주민복지과 ☎ 061-540-3132</string>
+
+
     <string name="btn8">약 배송 </string>
     <string name="btn9">병원 예약 </string>
     <string name="btn100">처방전 보기 </string>

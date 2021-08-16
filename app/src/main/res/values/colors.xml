@@ -7,6 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="benefit1">#E0B96D</color>
+    <color name="base">#6DE0CC</color>
+
+
 
     <!--팝업 배경-->
     <color name="dialogColor">#A6333333</color>
