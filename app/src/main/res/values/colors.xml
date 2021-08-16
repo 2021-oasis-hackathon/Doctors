@@ -10,6 +10,8 @@
 
     <!--팝업 배경-->
     <color name="dialogColor">#A6333333</color>
+    <color name="gray">#ECECEC</color>
+    <color name="darkgray">#C4C4C4</color>
 
     <!--팝업창 테마-->
     <style name="DialogTheme" parent="@style/Theme.AppCompat.NoActionBar">
