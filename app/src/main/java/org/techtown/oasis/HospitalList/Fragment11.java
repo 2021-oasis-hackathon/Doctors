@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
 
-import org.techtown.oasis.ChildFragment.FragmentChild1;
-import org.techtown.oasis.ChildFragment.FragmentChild2;
 import org.techtown.oasis.HospitalList.Child11.FragmentChild10;
 import org.techtown.oasis.HospitalList.Child11.FragmentChild11;
 import org.techtown.oasis.R;

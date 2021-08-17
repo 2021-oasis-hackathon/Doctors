@@ -11,10 +11,6 @@ import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
 
-import org.techtown.oasis.ChildFragment.FragmentChild1;
-import org.techtown.oasis.ChildFragment.FragmentChild2;
-import org.techtown.oasis.ChildFragment.FragmentChild3;
-
 public class Fragment6 extends Fragment {
 
     TabLayout tabLayout;
@@ -25,19 +21,9 @@ public class Fragment6 extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_6, container, false);
 
-        addFragment(rootView);
 
         return rootView;
     }
 
-    private void addFragment(View view) {
-        tabLayout = view.findViewById(R.id.tabLayout2);
-        viewPager = view.findViewById(R.id.viewPager2);
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new FragmentChild1(), "병원 예약");
-        adapter.addFragment(new FragmentChild2(), "약 배송");
-        adapter.addFragment(new FragmentChild3(), "방문 간호");
-        viewPager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(viewPager);
-    }
+
 }

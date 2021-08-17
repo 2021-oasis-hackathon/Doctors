@@ -35,8 +35,8 @@
 
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="76dp"
-        android:layout_height="30dp"
+        android:layout_width="108dp"
+        android:layout_height="28dp"
         android:gravity="center"
         android:text="@string/textView20"
         android:textAlignment="center"
@@ -66,8 +66,8 @@
 
     <TextView
         android:id="@+id/textView29"
-        android:layout_width="76dp"
-        android:layout_height="30dp"
+        android:layout_width="111dp"
+        android:layout_height="34dp"
         android:gravity="center"
         android:text="@string/textView21"
         android:textAlignment="center"
@@ -122,10 +122,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.831"
+        app:layout_constraintVertical_bias="0.838"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -146,8 +146,8 @@
 
     <TextView
         android:id="@+id/textView34"
-        android:layout_width="76dp"
-        android:layout_height="30dp"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
         android:gravity="center"
         android:text="@string/textView19"
         android:textAlignment="center"

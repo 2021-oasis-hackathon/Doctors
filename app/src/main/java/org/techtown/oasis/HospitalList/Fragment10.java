@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
-import org.techtown.oasis.ChildFragment.FragmentChild1;
-import org.techtown.oasis.ChildFragment.FragmentChild2;
 import org.techtown.oasis.HospitalList.Child10.FragmentChild8;
 import org.techtown.oasis.HospitalList.Child10.FragmentChild9;
 import org.techtown.oasis.HospitalList.Child8.FragmentChild5;
