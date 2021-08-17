@@ -29,5 +29,16 @@ public class prescrption extends AppCompatActivity {
             }
         });
 
+
+        Button imageButton2 = findViewById(R.id.btn9);
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), reservation.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

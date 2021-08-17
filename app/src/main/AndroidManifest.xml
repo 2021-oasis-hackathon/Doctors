@@ -7,15 +7,19 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello">
         <activity
+            android:name=".result.reservation"
+            android:exported="true" />
+        <activity
             android:name=".result.benefit_detail"
             android:exported="true"
-            android:parentActivityName=".result.benefits"/>
+            android:parentActivityName=".result.benefits" />
         <activity
             android:name=".result.benefits"
             android:exported="true" />

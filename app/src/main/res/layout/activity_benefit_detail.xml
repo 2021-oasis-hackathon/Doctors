@@ -7,6 +7,7 @@
     tools:context=".result.benefit_detail">
 
 
+
     <TextView
         android:id="@+id/textView30"
         android:layout_width="413dp"
