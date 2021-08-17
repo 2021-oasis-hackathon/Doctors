@@ -30,26 +30,12 @@
         android:layout_height="wrap_content"
         android:hint="예약 시간 선택"
         android:inputType="none"
-        app:layout_constraintBottom_toTopOf="@+id/date_time_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/date_time_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:inputType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.438"
         tools:ignore="MissingConstraints" />
 
 
