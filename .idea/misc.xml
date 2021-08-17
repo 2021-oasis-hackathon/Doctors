@@ -11,6 +11,8 @@
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box5.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box6.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box7.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box8.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box9.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/gray_outline.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/login_design.xml" value="0.38229166666666664" />
@@ -23,13 +25,20 @@
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_diagnosis_result.xml" value="0.25" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_history.xml" value="0.33" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_main2.xml" value="0.24739583333333334" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_payment.xml" value="0.29270833333333335" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_prescrption.xml" value="0.33" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_prescrption_image.xml" value="0.2046875" />
-        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_reservation.xml" value="0.33" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_reservation.xml" value="0.22" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/activity_videocall.xml" value="0.2046875" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_2.xml" value="0.24479166666666666" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_4.xml" value="0.24479166666666666" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_check_popup.xml" value="0.25" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_delivery.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_health_data.xml" value="0.25" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_history.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_prescrption.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_reservation_1.xml" value="0.24739583333333334" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/photo_activity.xml" value="0.29257246376811596" />
       </map>
     </option>
