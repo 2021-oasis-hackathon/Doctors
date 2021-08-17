@@ -48,4 +48,6 @@ dependencies {
     implementation 'com.yanzhenjie:permission:2.0.3'
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+    //Add LakuePopupActivity Library
+    implementation 'com.github.lakue119:LakuePopupActivity:1.0.1'
 }

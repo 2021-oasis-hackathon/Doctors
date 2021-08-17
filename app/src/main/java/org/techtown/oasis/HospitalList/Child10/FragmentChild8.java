@@ -322,7 +322,7 @@ public class FragmentChild8 extends Fragment {
     public void onStatusChanged(String provider, int status, Bundle extras) { }
 
 
-    // PersonArray 정렬을 위한 Comparator
+    // PersonArrayList 정렬을 위한 Comparator
     public static Comparator<Person> sortByTotalCall = new Comparator<Person>() {
 
         @Override

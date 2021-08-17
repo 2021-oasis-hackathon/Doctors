@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.techtown.oasis.HospitalList.Fragment14;
 import org.techtown.oasis.HospitalList.Fragment8;
 import org.w3c.dom.Text;
 
@@ -41,19 +42,20 @@ public class Fragment17 extends Fragment {
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1000-1000"));
-                startActivity(intent);
-                 */
 
                 if (name.equals("박기범")) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:061-542-7727"));
-                    //startActivity(intent);
+                    startActivity(intent);
                 }
                 else if (name.equals("이민수")) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:1577-0083"));
                     startActivity(intent);
                 }
+
+                FragmentPrescription fragmentPrescription = new FragmentPrescription();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, fragmentPrescription);
+                transaction.commit();
             }
         });
 

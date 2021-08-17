@@ -7,6 +7,26 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="benefit1">#E0B96D</color>
+    <color name="base">#6DE0CC</color>
+    <color name="text">#F2353535</color>
+    <color name="text2">#464646</color>
+    <color name="text3">#9F9F9F</color>
+    <color name="text4">#666666</color>
+    <color name="text5">#F2555555</color>
     <color name="colorPrimary">#40C4FF</color>
     <drawable name="item_color">#424242</drawable>
+
+    <!--팝업 배경-->
+    <color name="dialogColor">#A6333333</color>
+    <color name="gray">#ECECEC</color>
+    <color name="darkgray">#C4C4C4</color>
+
+    <!--팝업창 테마-->
+    <style name="DialogTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/dialogColor</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
 </resources>

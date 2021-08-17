@@ -4,5 +4,63 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="textView1">처방 받기 </string>
+    <string name="textView2">진단 결과에 따라 약을 배송 받거나 병원을 예약하세요. </string>
+    <string name="textView3"> </string>
+    <string name="textView4"> </string>
+    <string name="textView5">지난 진료  </string>
+    <string name="textView6">효사랑의원  </string>
+    <string name="textView7">정신과 </string>
+    <string name="textView8">김훈 </string>
+    <string name="textView13">현대의원 </string>
+    <string name="textView14">2021.6.08 / 11:00 </string>
+    <string name="textView9">2021.08.12 / 16:00</string>
+    <string name="textView10">중앙 </string>
+    <string name="textView11">지자체 </string>
+    <string name="textView12">의료급여임신·출산진료비지원 </string>
+    <string name="textView15">진도군 저소득주민 건강보험료 지원 </string>
+    <string name="textView16">치매 치료관리비 지원사업 </string>
+    <string name="textView17">한방 거동 불편자 가정방문진료 </string>
+    <string name="textView18">현재 위치 설정하기 </string>
+    <string name="textView19">지원대상 </string>
+    <string name="textView20">지원내용 </string>
+    <string name="textView21">신청방법  </string>
+    <string name="textView22">문의 </string>
+    <string name="textView23">- 건강보험료 부과일 현재 진도군에 주민등록을 두고 거주하는 저소득 주민으로서 국민건강보험료 부과금액이
+월별 보험료액의 하한 이상인 세대 </string>
+    <string name="textView24">- 65세이상 노인세대 </string>
+    <string name="textView25">- 장애인세대</string>
+    <string name="textView26">- 한부모가족세대 </string>
+    <string name="textView27">- 가정위탁세대 </string>
+    <string name="textView28">- 조손세대</string>
+    <string name="textView29">- 건강보험료 본인부담금 지원</string>
+    <string name="textView30">- 직접 지원(별도 신청사항 없음)</string>
+    <string name="textView31">- 전라남도 진도군 주민복지과 ☎ 061-540-3132</string>
+    <string name="textView32">정형외과 </string>
+    <string name="textView33">치과 </string>
+    <string name="textView34">혈압내과 </string>
+    <string name="textView35">안과 </string>
+    <string name="textView36">김훈신경정신과의원 </string>
+    <string name="textView37">☎ 061-244-5860 </string>
+    <string name="textView38">강지언 </string>
+    <string name="textView39">성모정신건강의학과의원 </string>
+    <string name="textView40">☎ 061-278-5875 </string>
+    <string name="textView41">예약 하기 </string>
+    <string name="textView42">정보 보기 </string>
+    <string name="textView43">요청 사항 </string>
+    <string name="textView44">사진 첨부 </string>
+    <string name="textView45">피부,상처,복용하는 약 등을 자유롭게 첨부해주세요. </string>
+    <string name="btn1">화상 진료 요청 </string>
+
+
+    <string name="btn8">약 배송 </string>
+    <string name="btn9">병원 예약 </string>
+    <string name="btn100">처방전 보기 </string>
+    <string name="btn13">닫기 </string>
+    <string name="btn12">PDF로 저장 </string>
+    <string name="edittext">보다 정확한 진료를 위해 증상의 부위, 크기, 통증 등을 자세하게 입력해주세요. </string>
+    <string name="StringValue">이미지가 열리지 않습니다.</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
