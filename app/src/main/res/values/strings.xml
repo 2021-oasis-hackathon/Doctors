@@ -27,7 +27,7 @@
     <string name="textView20">지원내용 </string>
     <string name="textView21">신청방법  </string>
     <string name="textView22">문의 </string>
-    <string name="textView23">- 건강보험료 부과일 현재 진도군에 주민등록을 두고 거주하는 저소득 주민으로서 국민건강보험료 부과금액이
+    <string name="textView23">- 건강보험료 부과일 현재 진도군에 주민등록을 두고 \n거주하는 저소득 주민으로서 국민건강보험료 부과금액이\n
 월별 보험료액의 하한 이상인 세대 </string>
     <string name="textView24">- 65세이상 노인세대 </string>
     <string name="textView25">- 장애인세대</string>

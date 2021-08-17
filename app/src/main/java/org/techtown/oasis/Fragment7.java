@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class Fragment7 extends Fragment {
+    TextView text;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -21,6 +23,15 @@ public class Fragment7 extends Fragment {
     }
 
     private void initUI(ViewGroup rootView) {
+        text = rootView.findViewById(R.id.textView12);
+        text.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                // 팝업 기능 구현
+                FragmentBenefitsDetails fragmentBenefitsDetails = FragmentBenefitsDetails.getInstance();
+                fragmentBenefitsDetails.show(getActivity().getSupportFragmentManager(), FragmentBenefitsDetails.TAG_EVENT_DIALOG);
+            }
+        });
     }
 }
