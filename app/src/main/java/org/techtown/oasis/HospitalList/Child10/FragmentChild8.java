@@ -57,7 +57,7 @@ public class FragmentChild8 extends Fragment {
     // 거리 순 정렬을 위한 스위치
     int sw = 0;
 
-    // 데이터를 넣은 리스트
+    // 검색 데이터를 넣은 리스트
     private List<String> list;
     // 검색 리스트
     private ListView listView;
@@ -144,7 +144,7 @@ public class FragmentChild8 extends Fragment {
         });
 
         // 검색 버튼
-        Button searchButton = rootView.findViewById(R.id.searchButton);
+        Button searchButton = rootView.findViewById(R.id.searchButton3);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,19 +161,25 @@ public class FragmentChild8 extends Fragment {
                     }
                 }
                 if (b) {  // 지도 화면으로 전환(fragment_map1~3)
+                    // 정보 전달(FragmentChild8에서 전환 했음을 알림)
+                    Bundle bundle = new Bundle();  // bundle으로 값 전달
+                    bundle.putString("fragmentName", "fragmentChild8"); // bundle에 넘길 값 저장
 
                     if (searchedText.equals("진도 대림 아파트")) {
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        fragmentMap1.setArguments(bundle);  // bundle을 보낼 준비
                         transaction.replace(R.id.container, fragmentMap1);
                         transaction.commit();
                     }
                     else if (searchedText.equals("가사도 마을회관")) {
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        fragmentMap2.setArguments(bundle);  // bundle을 보낼 준비
                         transaction.replace(R.id.container, fragmentMap2);
                         transaction.commit();
                     }
                     else if (searchedText.equals("진도 계명아파트")) {
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        fragmentMap3.setArguments(bundle);  // bundle을 보낼 준비
                         transaction.replace(R.id.container, fragmentMap3);
                         transaction.commit();
                     }
@@ -203,6 +209,7 @@ public class FragmentChild8 extends Fragment {
         }
 
         startLocationService();  // 위치 계산 서비스
+
         if (sw == 0) {  // 변경 x
         }
         else if (sw == 1) {
@@ -234,10 +241,10 @@ public class FragmentChild8 extends Fragment {
         dk4 = Math.round((distance4 / 1000));
         dk5 = Math.round((distance5 / 1000));
 
+        // personAdapter
         personAdapter = new PersonAdapter();
 
-        // recyclerView에 어댑터 설정
-        // 피부과
+        // 피부과 의사 객체들
         Person person1 = new Person(R.drawable.dermatology_parkkibum, "박기범", "현대의원", dk1, "대기 시간: 30분");
         Person person2 = new Person(R.drawable.dermatology_kwonohsang, "권오상", "효사랑의원", dk2, "대기 시간: 1시간");
         Person person3 = new Person(R.drawable.dermatology_yoonjaeil, "윤재일", "연합의원", dk3, "대기 시간: 40분");
@@ -253,7 +260,7 @@ public class FragmentChild8 extends Fragment {
         // 거리가 가까운 순서대로 정렬
         Collections.sort(personArrayList, sortByTotalCall);
         personAdapter.addItem(personArrayList);
-        recyclerView.setAdapter(personAdapter);
+        recyclerView.setAdapter(personAdapter); // recyclerView에 어댑터 설정
 
         // 어댑터에 리스너 설정
         personAdapter.setOnItemClickListener(new OnPersonItemClickListener() {
@@ -261,7 +268,8 @@ public class FragmentChild8 extends Fragment {
             public void onItemClick(PersonAdapter.ViewHolder holder, View view, int position) {
                 Person item = personAdapter.getItem(position);  // 어댑터에 리스너 설정
                 Toast.makeText(getContext(), "의사 선택됨: " + item.getName(), Toast.LENGTH_SHORT).show();
-                if (position == 0) {
+                if (item.getName().equals("박기범")) {
+                    // 박기범 의사 프로필 화면으로 전환
                     Fragment15 fragment15 = new Fragment15();
                     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                     transaction.replace(R.id.container, fragment15);
@@ -293,12 +301,8 @@ public class FragmentChild8 extends Fragment {
 
             // 최소 시간, 최소 거리마다 위치 업데이트 요청
             mgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, gpsListener);
-            Toast.makeText(getContext(), "내 위치 확인 요청함", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getContext(), "내 위치 확인 요청함", Toast.LENGTH_SHORT).show();
 
-            /*
-            String message = Double.toString(distance);
-            Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
-             */
         } catch (SecurityException e) {
             e.printStackTrace();
         }

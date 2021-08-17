@@ -43,12 +43,6 @@ public class FragmentPrescription extends Fragment {
         btn100.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                FragmentPrescriptionImage fragment_prescriptionImage = new FragmentPrescriptionImage();
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.container, fragment_prescriptionImage);
-                transaction.commit();
-                */
 
                 // 팝업 기능 구현
                 FragmentPrescriptionImage fragmentPrescriptionImage = FragmentPrescriptionImage.getInstance();

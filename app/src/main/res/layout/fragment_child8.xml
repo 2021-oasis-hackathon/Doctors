@@ -36,10 +36,10 @@
                         android:hint="검색어를 입력하세요." />
 
                     <Button
-                        android:id="@+id/searchButton"
+                        android:id="@+id/searchButton3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="검색" />
+                        android:text="위치 검색" />
                 </LinearLayout>
 
                 <ListView

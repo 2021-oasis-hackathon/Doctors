@@ -1,64 +1,98 @@
 package org.techtown.oasis;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TimePicker;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentReservation#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.Calendar;
+
 public class FragmentReservation extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public FragmentReservation() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment_reservation.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FragmentReservation newInstance(String param1, String param2) {
-        FragmentReservation fragment = new FragmentReservation();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    EditText date_in;
+    EditText time_in;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reservation, container, false);
+
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_reservation, container, false);
+
+        date_in = rootView.findViewById(R.id.date_input);
+        time_in = rootView.findViewById(R.id.time_input);
+
+        date_in.setInputType(InputType.TYPE_NULL);
+        time_in.setInputType(InputType.TYPE_NULL);
+
+
+        date_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDateDialog(date_in);
+            }
+        });
+
+        time_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showTimeDialog(time_in);
+            }
+        });
+
+        return rootView;
     }
+
+    private void showTimeDialog(EditText time_in) {
+        final Calendar calendar = Calendar.getInstance();
+
+        TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                calendar.set(Calendar.MINUTE,minute);
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
+                time_in.setText(simpleDateFormat.format(calendar.getTime()));
+
+            }
+        };
+
+        new TimePickerDialog(getContext(), timeSetListener, calendar.get(Calendar.HOUR_OF_DAY),
+                calendar.get(Calendar.MINUTE),false).show();
+
+
+    }
+
+    private void showDateDialog(EditText date_in) {
+        Calendar calendar = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener dateSetListener=new DatePickerDialog.OnDateSetListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                calendar.set(Calendar.YEAR,year);
+                calendar.set(Calendar.MONTH,month);
+                calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd");
+
+                date_in.setText(simpleDateFormat.format(calendar.getTime()));
+
+            }
+        };
+
+        new DatePickerDialog(getContext(), dateSetListener,calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
+    }
+
 }
