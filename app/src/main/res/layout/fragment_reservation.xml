@@ -1,55 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
     tools:ignore="OnClick"
-    android:padding="10dp">
+    tools:context=".FragmentReservation"
+    android:padding="10dp"
+    android:orientation="vertical" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView tools:ignore="MissingConstraints" android:layout_height="66dp" android:layout_width="431dp" app:layout_constraintVertical_bias="0.067" app:layout_constraintTop_toBottomOf="@+id/textView8" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.75" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:gravity="center" android:background="@drawable/gray_outline" android:id="@+id/gray_outline"/>
+    <TextView tools:ignore="MissingConstraints" android:layout_height="73dp" android:layout_width="415dp" app:layout_constraintVertical_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/gray_outline2" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:gravity="center" android:background="@drawable/gray_outline" android:id="@+id/gray_outline3"/>
+    <TextView tools:ignore="MissingConstraints" android:layout_height="95dp" android:layout_width="416dp" app:layout_constraintVertical_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/gray_outline3" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.4" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:gravity="center" android:background="@drawable/gray_outline" android:id="@+id/gray_outline4"/>
+    <TextView tools:ignore="MissingConstraints" android:layout_height="145dp" android:layout_width="422dp" app:layout_constraintVertical_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/gray_outline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.545" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:gravity="center" android:background="@drawable/gray_outline" android:id="@+id/gray_outline2"/>
+    <TextView tools:ignore="MissingConstraints" android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintVertical_bias="0.194" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.456" app:layout_constraintEnd_toEndOf="parent" android:gravity="center" android:id="@+id/reservation_date10" app:layout_constraintTop_toTopOf="@+id/gray_outline2" app:layout_constraintBottom_toTopOf="@+id/gray_outline3" android:textSize="20sp" android:textColor="@color/text2" android:text="안암 병원"/>
+    <TextView tools:ignore="MissingConstraints" android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintVertical_bias="0.191" app:layout_constraintTop_toBottomOf="@+id/gray_outline3" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.428" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="@+id/gray_outline4" android:gravity="center" android:id="@+id/reservation_date15" android:textSize="20sp" android:textColor="@color/text2" android:text="이민수"/>
+    <TextView tools:ignore="MissingConstraints" android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintVertical_bias="0.194" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.09" app:layout_constraintEnd_toEndOf="parent" android:gravity="center" android:id="@+id/reservation_date4" app:layout_constraintTop_toTopOf="@+id/gray_outline2" app:layout_constraintBottom_toTopOf="@+id/gray_outline3" android:textSize="20sp" android:textColor="@color/text2" android:text="병원 명" android:textStyle="bold"/>
+    <TextView tools:ignore="MissingConstraints" android:layout_height="33dp" android:layout_width="112dp" app:layout_constraintVertical_bias="0.52" app:layout_constraintTop_toBottomOf="@+id/gray_outline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.053" app:layout_constraintEnd_toEndOf="parent" android:gravity="center" android:id="@+id/reservation_date5" app:layout_constraintBottom_toTopOf="@+id/gray_outline3" android:textSize="14sp" android:textColor="#777777" android:text="병원주소" android:textStyle="bold"/>
 
-
-    <EditText
-        android:id="@+id/date_input"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/reservation_date11"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="예약 날짜 선택"
-        android:inputType="none"
-        app:layout_constraintBottom_toTopOf="@+id/time_input"
+        android:gravity="center"
+        android:text="서울 성북구 고려대로 73 (우)02841"
+        android:textColor="#777777"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/gray_outline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toEndOf="@+id/reservation_date5"
+        app:layout_constraintTop_toTopOf="@+id/gray_outline2"
+        app:layout_constraintVertical_bias="0.515"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/reservation_date12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1577-0083"
+        android:textColor="#777777"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/gray_outline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toEndOf="@+id/reservation_date6"
+        app:layout_constraintTop_toTopOf="@+id/gray_outline2"
+        app:layout_constraintVertical_bias="0.777"
+        tools:ignore="MissingConstraints" />
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintVertical_bias="0.71" app:layout_constraintTop_toBottomOf="@+id/gray_outline3" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.49" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="@+id/gray_outline4" android:gravity="center" android:id="@+id/reservation_date16" android:textSize="14sp" android:textColor="#777777" android:text="정신건강의학과"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="33dp" android:layout_width="112dp" app:layout_constraintVertical_bias="0.82" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.053" app:layout_constraintEnd_toEndOf="parent" android:gravity="center" android:id="@+id/reservation_date6" app:layout_constraintTop_toTopOf="@+id/gray_outline2" app:layout_constraintBottom_toTopOf="@+id/gray_outline3" android:textSize="14sp" android:textColor="#777777" android:text="병원번호" android:textStyle="bold"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="33dp" android:layout_width="112dp" app:layout_constraintVertical_bias="0.769" app:layout_constraintTop_toBottomOf="@+id/gray_outline3" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.05" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="@+id/gray_outline4" android:gravity="center" android:id="@+id/reservation_date14" android:textSize="14sp" android:textColor="#777777" android:text="의사 전공" android:textStyle="bold"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="33dp" android:layout_width="112dp" app:layout_constraintVertical_bias="0.075" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.01" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:gravity="center" android:id="@+id/reservation_date" app:layout_constraintTop_toTopOf="parent" android:textSize="20sp" android:textColor="@color/text2" android:text="예약 날짜" android:shadowRadius="2.0" android:shadowDy="1.0" android:shadowDx="1.0" android:shadowColor="@color/black"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="33dp" android:layout_width="112dp" app:layout_constraintVertical_bias="0.056" app:layout_constraintTop_toBottomOf="@+id/reservation_date" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.01" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:gravity="center" android:id="@+id/reservation_date2" android:textSize="20sp" android:textColor="@color/text2" android:text="예약 시간" android:shadowRadius="2.0" android:shadowDy="1.0" android:shadowDx="1.0" android:shadowColor="@color/black"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintVertical_bias="0.564" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.09" app:layout_constraintEnd_toEndOf="@+id/gray_outline" app:layout_constraintBottom_toBottomOf="@+id/gray_outline" android:gravity="center" android:id="@+id/reservation_date3" app:layout_constraintTop_toTopOf="@+id/gray_outline" android:textSize="20sp" android:textColor="@color/text2" android:text="예약 병원" android:textStyle="bold"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintVertical_bias="0.48000002" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.09" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="@+id/gray_outline3" android:gravity="center" android:id="@+id/reservation_date7" app:layout_constraintTop_toTopOf="@+id/gray_outline3" android:textSize="20sp" android:textColor="@color/text2" android:text="예약 의사" android:textStyle="bold"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintVertical_bias="0.191" app:layout_constraintTop_toBottomOf="@+id/gray_outline3" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.09" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="@+id/gray_outline4" android:gravity="center" android:id="@+id/reservation_date13" android:textSize="20sp" android:textColor="@color/text2" android:text="의사 명" android:textStyle="bold"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="48dp" android:layout_width="257dp" app:layout_constraintVertical_bias="0.065" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.896" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:background="@drawable/login_design" android:id="@+id/textView3" app:layout_constraintTop_toTopOf="parent" android:text="@string/textView3" android:shadowRadius="4" android:shadowDy="2" android:shadowDx="2" android:shadowColor="@color/black"/>
+
+    <TextView tools:ignore="MissingConstraints" android:layout_height="48dp" android:layout_width="257dp" app:layout_constraintVertical_bias="0.169" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.896" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:background="@drawable/login_design" android:id="@+id/textView8" app:layout_constraintTop_toTopOf="parent" android:text="@string/textView3"/>
 
     <EditText
         android:id="@+id/time_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="193dp"
+        android:layout_height="44dp"
+        android:gravity="center"
         android:hint="예약 시간 선택"
         android:inputType="none"
-        app:layout_constraintBottom_toTopOf="@+id/date_time_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/date_time_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:inputType="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
+    <EditText
+        android:id="@+id/date_input"
+        android:layout_width="195dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:hint="예약 날짜 선택"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button tools:ignore="MissingConstraints,UnknownIdInLayout"
+        android:layout_height="50dp" android:layout_width="343dp"
+        app:layout_constraintVertical_bias="0.341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/reservation" android:textSize="20sp" android:textColor="@color/white" android:text="예약 하기" android:textStyle="bold" android:shadowRadius="1.0" android:shadowDy="1.0" android:shadowDx="1.0" android:shadowColor="@color/black" android:onClick="onClick" android:backgroundTint="@color/base"/>
+
+    <androidx.constraintlayout.widget.Group android:layout_height="105dp" android:layout_width="135dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/group4" app:layout_constraintTop_toTopOf="parent" app:constraint_referenced_ids="gray_outline,gray_outline3,gray_outline4,gray_outline2,reservation_date10,reservation_date15,reservation_date4,reservation_date5,reservation_date11,reservation_date12,reservation_date16,reservation_date6,reservation_date14,reservation_date,reservation_date2,reservation_date3,reservation_date7,reservation_date13,textView3,textView8,time_input,date_input"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

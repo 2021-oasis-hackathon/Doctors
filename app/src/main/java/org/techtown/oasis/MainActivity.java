@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
     org.techtown.oasis.Fragment3 fragment3;
     org.techtown.oasis.Fragment4 fragment4;
     org.techtown.oasis.Fragment5 fragment5;
-    org.techtown.oasis.Fragment6 fragment6;
+    org.techtown.oasis.FragmentReservation fragment6;
     org.techtown.oasis.Fragment7 fragment7;
 
     BottomNavigationView bottomNavigation;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
         fragment3 = new org.techtown.oasis.Fragment3();
         fragment4 = new org.techtown.oasis.Fragment4();
         fragment5 = new org.techtown.oasis.Fragment5();
-        fragment6 = new org.techtown.oasis.Fragment6();
+        fragment6 = new org.techtown.oasis.FragmentReservation();  // fragment6 -> fragmentReservation
         fragment7 = new org.techtown.oasis.Fragment7();
 
         // 처음에는 프래그먼트1
