@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#00FFFFFF"
+    android:background="@drawable/box7"
     tools:ignore="MissingConstraints,OnClick,UnknownIdInLayout">
 
 
@@ -12,9 +12,11 @@
         android:id="@+id/closeButton"
         android:layout_width="323dp"
         android:layout_height="89dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box6"
         android:onClick="onClick"
         android:text="pdf로 저장 후 닫기"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView1" />

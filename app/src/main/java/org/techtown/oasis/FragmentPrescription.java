@@ -19,15 +19,18 @@ public class FragmentPrescription extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_prescription, container, false);
 
         Button btn8, btn9, btn100;
-
+        // 약 배송으로
         btn8 = rootView.findViewById(R.id.btn8);
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                FragmentDelivery fragmentDelivery = new FragmentDelivery();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, fragmentDelivery);
+                transaction.commit();
             }
         });
-
+        // 병원 예약으로
         btn9 = rootView.findViewById(R.id.btn9);
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +41,7 @@ public class FragmentPrescription extends Fragment {
                 transaction.commit();
             }
         });
-
+        // 처방전 보기
         btn100 = rootView.findViewById(R.id.btn100);
         btn100.setOnClickListener(new View.OnClickListener() {
             @Override

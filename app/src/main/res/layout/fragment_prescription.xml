@@ -101,7 +101,7 @@
         android:shadowRadius="2.0"
         android:text="@string/textView2"
         android:textColor="@color/text5"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn8"
         app:layout_constraintEnd_toEndOf="parent"
