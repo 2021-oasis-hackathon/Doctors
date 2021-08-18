@@ -23,7 +23,7 @@ public class Fragment7 extends Fragment {
     }
 
     private void initUI(ViewGroup rootView) {
-        text = rootView.findViewById(R.id.textView12);
+        text = rootView.findViewById(R.id.editTextAge);
         text.setOnClickListener(new View.OnClickListener() {
 
             @Override

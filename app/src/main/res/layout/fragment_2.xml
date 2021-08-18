@@ -416,7 +416,8 @@
                     android:id="@+id/searchButton"
                     android:layout_width="55dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/question" />
+                    android:background="@drawable/question"
+                    app:backgroundTint="@color/base" />
             </LinearLayout>
 
             <ListView

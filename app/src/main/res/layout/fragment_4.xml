@@ -24,7 +24,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView"
-        android:id="@+id/button1"/>
+        android:id="@+id/btnCapture"/>
 
     <Button android:layout_height="wrap_content"
         android:layout_width="413dp"
@@ -40,13 +40,13 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" android:id="@+id/button2" android:backgroundTint="@color/gray" android:layout_marginBottom="-49dp" android:layout_alignBottom="@+id/button1"/>
+        android:layout_alignParentStart="true" android:id="@+id/btnNext2" android:backgroundTint="@color/gray" android:layout_marginBottom="-49dp" android:layout_alignBottom="@+id/btnCapture"/>
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button1"
+        android:layout_alignBottom="@+id/btnCapture"
         android:layout_marginBottom="-201dp"
         android:backgroundTint="@color/gray"
         android:gravity="left"
@@ -55,13 +55,13 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <Button android:layout_height="wrap_content" android:layout_width="414dp" android:textStyle="bold" android:textSize="20sp" android:textColor="@color/text2" android:text="우리 지역 의료혜택 확인하기" android:gravity="left" android:layout_marginRight="-3dp" android:layout_marginEnd="-3dp" android:layout_marginLeft="0dp" android:layout_marginStart="0dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:id="@+id/button4" android:backgroundTint="@color/gray" android:layout_marginBottom="-92dp" android:layout_alignBottom="@+id/button1"/>
+    <Button android:layout_height="wrap_content" android:layout_width="414dp" android:textStyle="bold" android:textSize="20sp" android:textColor="@color/text2" android:text="우리 지역 의료혜택 확인하기" android:gravity="left" android:layout_marginRight="-3dp" android:layout_marginEnd="-3dp" android:layout_marginLeft="0dp" android:layout_marginStart="0dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:id="@+id/button4" android:backgroundTint="@color/gray" android:layout_marginBottom="-92dp" android:layout_alignBottom="@+id/btnCapture"/>
 
     <Button
         android:id="@+id/button5"
         android:layout_width="414dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button1"
+        android:layout_alignBottom="@+id/btnCapture"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginEnd="-3dp"
@@ -76,7 +76,7 @@
 
     <TextView android:layout_height="40sp" android:layout_width="40sp" android:textSize="20sp" android:text="MY" android:layout_marginTop="9dp" android:layout_marginLeft="266dp" android:layout_marginStart="266dp" android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_alignLeft="@+id/textView2" android:layout_alignStart="@+id/textView2"/>
 
-    <TextView android:layout_height="24dp" android:layout_width="wrap_content" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/text2" android:text="님! 안녕하세요." android:layout_marginRight="213dp" android:layout_marginEnd="213dp" android:layout_marginTop="18dp" android:id="@+id/textView2" android:layout_marginBottom="38dp" android:layout_alignBottom="@+id/button1" android:layout_alignRight="@+id/button1" android:layout_alignEnd="@+id/button1" android:layout_alignTop="@+id/button1"/>
-    <TextView android:layout_height="75dp" android:layout_width="match_parent" android:textStyle="bold" android:textSize="24sp" android:textColor="@color/text2" android:text=" \n 설정" android:background="@drawable/gray_outline" android:layout_marginRight="-2dp" android:layout_marginEnd="-2dp" android:layout_marginTop="156dp" android:id="@+id/textView4" android:layout_marginBottom="-152dp" android:layout_alignBottom="@+id/button1" android:layout_alignRight="@+id/button1" android:layout_alignEnd="@+id/button1" android:layout_alignTop="@+id/button1"/>
-    <TextView android:layout_height="24dp" android:layout_width="144dp" android:textStyle="bold" android:textSize="14sp" android:textColor="#666666" android:text="Doctors@gmail.com" android:layout_marginRight="247dp" android:layout_marginEnd="247dp" android:layout_marginTop="45dp" android:id="@+id/textView3" android:layout_marginBottom="11dp" android:layout_alignBottom="@+id/button1" android:layout_alignRight="@+id/button1" android:layout_alignEnd="@+id/button1" android:layout_alignTop="@+id/button1"/>
+    <TextView android:layout_height="24dp" android:layout_width="wrap_content" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/text2" android:text="님! 안녕하세요." android:layout_marginRight="213dp" android:layout_marginEnd="213dp" android:layout_marginTop="18dp" android:id="@+id/textView2" android:layout_marginBottom="38dp" android:layout_alignBottom="@+id/btnCapture" android:layout_alignRight="@+id/btnCapture" android:layout_alignEnd="@+id/btnCapture" android:layout_alignTop="@+id/btnCapture"/>
+    <TextView android:layout_height="75dp" android:layout_width="match_parent" android:textStyle="bold" android:textSize="24sp" android:textColor="@color/text2" android:text=" \n 설정" android:background="@drawable/gray_outline" android:layout_marginRight="-2dp" android:layout_marginEnd="-2dp" android:layout_marginTop="156dp" android:id="@+id/textView4" android:layout_marginBottom="-152dp" android:layout_alignBottom="@+id/btnCapture" android:layout_alignRight="@+id/btnCapture" android:layout_alignEnd="@+id/btnCapture" android:layout_alignTop="@+id/btnCapture"/>
+    <TextView android:layout_height="24dp" android:layout_width="144dp" android:textStyle="bold" android:textSize="14sp" android:textColor="#666666" android:text="Doctors@gmail.com" android:layout_marginRight="247dp" android:layout_marginEnd="247dp" android:layout_marginTop="45dp" android:id="@+id/textView3" android:layout_marginBottom="11dp" android:layout_alignBottom="@+id/btnCapture" android:layout_alignRight="@+id/btnCapture" android:layout_alignEnd="@+id/btnCapture" android:layout_alignTop="@+id/btnCapture"/>
 </RelativeLayout>

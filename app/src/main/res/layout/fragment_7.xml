@@ -141,7 +141,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/editTextAge"
         android:layout_width="411dp"
         android:layout_height="121dp"
         android:background="@drawable/outline"

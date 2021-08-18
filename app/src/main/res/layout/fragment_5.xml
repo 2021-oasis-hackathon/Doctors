@@ -131,7 +131,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgCapture"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:background="@drawable/img_1"
@@ -553,7 +553,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
-        app:constraint_referenced_ids="textView3,textView10,textView25,textView43,textView44,textView45,imageView,imageView2,imageView3,imageView4" />
+        app:constraint_referenced_ids="textView3,textView10,textView25,textView43,textView44,textView45,imgCapture,imageView2,imageView3,imageView4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

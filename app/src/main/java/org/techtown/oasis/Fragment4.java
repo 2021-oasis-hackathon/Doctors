@@ -49,7 +49,7 @@ public class Fragment4 extends Fragment {
         Button button1, button2, button3, button4, button5;
 
         //button1 = rootView.findViewById(R.id.button1);
-        button2 = rootView.findViewById(R.id.button2);
+        button2 = rootView.findViewById(R.id.btnNext2);
         button3 = rootView.findViewById(R.id.button3);
         button4 = rootView.findViewById(R.id.button4);
         button5 = rootView.findViewById(R.id.button5);

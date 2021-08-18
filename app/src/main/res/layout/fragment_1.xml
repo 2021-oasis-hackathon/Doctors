@@ -29,8 +29,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="220dp"
         android:background="@drawable/login_design"
-        android:hint="       아이디"
+        android:hint="아이디"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName" />
 
     <EditText
@@ -41,8 +42,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="290dp"
         android:background="@drawable/login_design"
-        android:hint="       비밀번호"
+        android:hint="비밀번호"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName" />
 
     <Button
