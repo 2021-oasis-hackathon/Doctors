@@ -87,14 +87,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="260dp"
-                android:layout_marginLeft="27dp"
-                android:textColor="#777777"
-                android:textSize="17sp"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="260dp"
                 android:text="고려대학교 대학원 의학 박사\n고려대학교 의과대학 정신건강의학과 교수\n고려대학교 안암병원 정신건강의학과 교수\n고려대학교 안암병원 정신과 과장\n고려대학교 생명공학원 겸임교수
-	\n도서 ‘마음의 감기 치료법 우울증 119’ 저술" />
+	\n도서 ‘마음의 감기 치료법 우울증 119’ 저술"
+                android:textColor="#777777"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -124,12 +124,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="490dp"
                 android:layout_marginLeft="27dp"
-                android:textSize="17sp"
+                android:layout_marginTop="490dp"
                 android:text="고려대학교 안암병원\n서울 성북구 고려대로 73 (우)02841"
-                android:layout_alignParentLeft="true" />
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -149,10 +149,11 @@
                 android:layout_below="@+id/textView15"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginStart="27dp"
-                android:layout_marginLeft="27dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="6dp"
                 android:text="전화번호: 1577-0083"
-                android:textSize="17sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
