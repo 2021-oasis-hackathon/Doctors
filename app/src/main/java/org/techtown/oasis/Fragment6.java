@@ -18,7 +18,6 @@ public class Fragment6 extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_6, container, false);
 
-
         return rootView;
     }
 
