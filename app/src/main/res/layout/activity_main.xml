@@ -26,7 +26,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:itemBackground="@drawable/downbarframe"
-        app:itemIconTint=""
+        app:itemIconTint="@drawable/item_color"
         app:itemTextColor="@drawable/item_color"
         app:menu="@menu/menu_bottom" />
 

@@ -21,7 +21,7 @@
         android:shadowDy="1.0"
         android:shadowRadius="3.0"
         android:text="따로 앓고 있는 병이 있다면?"
-        android:textColor="@color/white"
+        android:textColor="#161616"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
