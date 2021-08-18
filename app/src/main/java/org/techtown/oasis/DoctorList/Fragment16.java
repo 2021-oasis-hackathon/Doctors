@@ -1,5 +1,7 @@
 package org.techtown.oasis.DoctorList;
 
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.techtown.oasis.Fragment17;
@@ -23,6 +26,9 @@ public class Fragment16 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_16, container, false);
 
         Button call_button2 = rootView.findViewById(R.id.call_button2);
+        ImageView imageView = rootView.findViewById(R.id.imageView3);
+        imageView.setBackground(new ShapeDrawable(new OvalShape()));   // 의사 사진 동그랗게
+        imageView.setClipToOutline(true);   // 의사 사진 동그랗게
         call_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
