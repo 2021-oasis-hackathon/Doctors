@@ -4,66 +4,180 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DoctorList.Fragment16">
+    tools:context=".DoctorList.Fragment16"
+    android:background="#C4C4C4">
 
     <!-- TODO: Update blank fragment layout -->
     <Button
         android:id="@+id/call_button2"
         android:layout_width="match_parent"
-        android:layout_height="81dp"
+        android:layout_height="65dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="51dp"
-        android:text="진료 요청하기"
-        android:textSize="30sp" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#6DE0CC"
+        android:backgroundTint="#6DE0CC"
+        android:text="의사 선택"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/textView14"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="178dp"
-        android:text="소속: 고려대학교 안암병원\n경력: 고려대학교 대학원 의학 박사\n고려대학교 의과대학 정신건강의학과 교수\n고려대학교 안암병원 정신건강의학과 교수\n고려대학교 안암병원 정신과 과장\n고려대학교 생명공학원 겸임교수
-	\n도서 ‘마음의 감기 치료법 우울증 119’ 저술\n주소: 서울 성북구 고려대로 73 (우)02841"
-        android:textSize="20sp" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="79dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginRight="86dp"
-        android:text="이민수"
-        android:textSize="30sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/box7">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="48dp"
-        android:src="@drawable/psychiatry_leeminsoo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="180dp"
+                android:text="이민수"
+                android:textColor="#000000"
+                android:textSize="27sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView14"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="5dp"
-        android:text="전화번호: 1577-0083"
-        android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="183dp"
+                android:layout_marginTop="100dp"
+                android:text="정신과"
+                android:textColor="#000000"
+                android:textSize="23sp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="      진료가능"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="178dp"
+                android:background="#ECECEC"
+                android:layout_alignParentLeft="true"
+                android:textSize="17dp"
+                android:textColor="#777777"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="220dp"
+                android:text="경력"
+                android:layout_marginLeft="30dp"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="260dp"
+                android:layout_marginLeft="27dp"
+                android:textColor="#777777"
+                android:textSize="17sp"
+                android:layout_alignParentLeft="true"
+                android:text="고려대학교 대학원 의학 박사\n고려대학교 의과대학 정신건강의학과 교수\n고려대학교 안암병원 정신건강의학과 교수\n고려대학교 안암병원 정신과 과장\n고려대학교 생명공학원 겸임교수
+	\n도서 ‘마음의 감기 치료법 우울증 119’ 저술" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:background="#353535"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="430dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="450dp"
+                android:text="병원"
+                android:layout_marginLeft="30dp"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="490dp"
+                android:layout_marginLeft="27dp"
+                android:textSize="17sp"
+                android:text="고려대학교 안암병원\n서울 성북구 고려대로 73 (우)02841"
+                android:layout_alignParentLeft="true" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/psychiatry_leeminsoo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView15"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginLeft="27dp"
+                android:text="전화번호: 1577-0083"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="580dp"
+                android:text="오시는길"
+                android:layout_marginLeft="30dp"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_alignParentLeft="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/korea_university_hospital_map"
+                android:scaleType="centerCrop"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="630dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentLeft="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
