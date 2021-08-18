@@ -57,9 +57,12 @@ public class FragmentReservation extends Fragment {
         reservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                // 팝업 기능 구현
+                FragmentCheckPopup fragmentCheckPopup = FragmentCheckPopup.getInstance();
+                fragmentCheckPopup.show(getActivity().getSupportFragmentManager(), FragmentCheckPopup.TAG_EVENT_DIALOG);
             }
         });
+
         return rootView;
     }
 

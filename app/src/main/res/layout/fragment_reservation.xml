@@ -97,13 +97,26 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
-    <Button tools:ignore="MissingConstraints,UnknownIdInLayout"
-        android:layout_height="50dp" android:layout_width="343dp"
-        app:layout_constraintVertical_bias="0.341"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/reservation"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/base"
+        android:onClick="onClick"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:text="예약 하기"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:id="@+id/reservation" android:textSize="20sp" android:textColor="@color/white" android:text="예약 하기" android:textStyle="bold" android:shadowRadius="1.0" android:shadowDy="1.0" android:shadowDx="1.0" android:shadowColor="@color/black" android:onClick="onClick" android:backgroundTint="@color/base"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gray_outline4"
+        app:layout_constraintVertical_bias="0.341"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
 
     <androidx.constraintlayout.widget.Group android:layout_height="105dp" android:layout_width="135dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/group4" app:layout_constraintTop_toTopOf="parent" app:constraint_referenced_ids="gray_outline,gray_outline3,gray_outline4,gray_outline2,reservation_date10,reservation_date15,reservation_date4,reservation_date5,reservation_date11,reservation_date12,reservation_date16,reservation_date6,reservation_date14,reservation_date,reservation_date2,reservation_date3,reservation_date7,reservation_date13,textView3,textView8,time_input,date_input"/>
 
