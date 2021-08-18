@@ -192,10 +192,10 @@ public class Fragment2 extends Fragment {
             }
         });
 
-        // 내 정보 입력하러 가기 버튼
-        ImageButton myInfoButton;
-        myInfoButton = rootView.findViewById(R.id.imageButton);
-        myInfoButton.setOnClickListener(new View.OnClickListener() {
+        // 내 정보 입력하러 가기
+        ImageButton imageButton;
+        imageButton = rootView.findViewById(R.id.imageButton123);
+        imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // fragment_3로 전환

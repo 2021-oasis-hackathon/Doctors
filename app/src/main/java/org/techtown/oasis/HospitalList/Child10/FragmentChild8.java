@@ -20,18 +20,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.techtown.oasis.DoctorList.Fragment15;
-import org.techtown.oasis.DoctorList.Fragment16;
-import org.techtown.oasis.HospitalList.Fragment10;
-import org.techtown.oasis.HospitalList.Fragment11;
-import org.techtown.oasis.HospitalList.Fragment12;
-import org.techtown.oasis.HospitalList.Fragment13;
-import org.techtown.oasis.HospitalList.Fragment14;
-import org.techtown.oasis.HospitalList.Fragment8;
-import org.techtown.oasis.HospitalList.Fragment9;
 import org.techtown.oasis.HospitalList.OnPersonItemClickListener;
 import org.techtown.oasis.HospitalList.Person;
 import org.techtown.oasis.HospitalList.PersonAdapter;
@@ -40,17 +31,11 @@ import org.techtown.oasis.MapFragment.FragmentMap2;
 import org.techtown.oasis.MapFragment.FragmentMap3;
 import org.techtown.oasis.R;
 import org.techtown.oasis.SearchAdapter;
-import org.techtown.oasis.SpecialFragment;
 
-import java.text.DecimalFormat;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collector;
-
-import static androidx.core.content.ContextCompat.getSystemService;
 
 public class FragmentChild8 extends Fragment {
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout tools:ignore="MissingConstraints" tools:context=".Fragment2" android:background="@color/white" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView android:background="@drawable/login_design" android:layout_height="48dp" android:layout_width="257dp" tools:layout_editor_absoluteY="42dp" tools:layout_editor_absoluteX="128dp" android:layout_toLeftOf="@+id/button1" android:layout_toStartOf="@+id/button1" android:layout_below="@+id/textView5" android:id="@+id/textView12"/>
+
+    <Spinner android:background="@drawable/login_design" android:layout_height="48dp" android:layout_width="257dp" tools:layout_editor_absoluteY="107dp" tools:layout_editor_absoluteX="128dp" android:id="@+id/spinner2" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:layout_alignParentTop="true"/>
+
+    <TextView android:layout_height="25sp" android:layout_width="86sp" tools:layout_editor_absoluteY="52dp" tools:layout_editor_absoluteX="30dp" android:layout_toLeftOf="@+id/editText1" android:layout_toStartOf="@+id/editText1" android:id="@+id/textView1" android:layout_alignParentTop="true" android:textSize="20sp" android:textColor="#353535" android:text="복용 약" android:shadowRadius="2.0" android:shadowDy="1.0" android:shadowDx="1.0" android:shadowColor="@color/black" android:gravity="center"/>
+
+    <TextView android:layout_height="25sp" android:layout_width="86sp" tools:layout_editor_absoluteY="120dp" tools:layout_editor_absoluteX="218dp" android:layout_toLeftOf="@+id/editText1" android:layout_toStartOf="@+id/editText1" android:id="@+id/textView20" android:layout_alignParentTop="true" android:textSize="14sp" android:textColor="#9F9F9F" android:text="질환 추가" android:shadowRadius="2.0" android:shadowDy="1.0" android:shadowDx="1.0" android:shadowColor="@color/black" android:gravity="center"/>
+
+    <TextView android:layout_height="25sp" android:layout_width="86sp" tools:layout_editor_absoluteY="198dp" tools:layout_editor_absoluteX="30dp" android:layout_toLeftOf="@+id/spinner2" android:layout_toStartOf="@+id/spinner2" android:id="@+id/textView81" android:layout_alignParentTop="true" android:textSize="20sp" android:textColor="#353535" android:text="사진 첨부" android:shadowRadius="2.0" android:shadowDy="1.0" android:shadowDx="1.0" android:shadowColor="@color/black" android:gravity="center"/>
+
+    <EditText android:layout_height="48dp" android:layout_width="257dp" tools:layout_editor_absoluteY="42dp" tools:layout_editor_absoluteX="128dp" android:id="@+id/editText1" android:layout_alignParentTop="true" android:inputType="textPersonName" android:ems="10" android:layout_alignBottom="@+id/textView12" android:layout_alignRight="@+id/textView12" android:layout_alignEnd="@+id/textView12" android:layout_alignLeft="@+id/textView12" android:layout_alignStart="@+id/textView12"/>
+
+    <TextView tools:ignore="UnknownIdInLayout" android:layout_height="wrap_content" android:layout_width="wrap_content" tools:layout_editor_absoluteY="233dp" tools:layout_editor_absoluteX="30dp" android:layout_toLeftOf="@+id/button1" android:layout_toStartOf="@+id/button1" android:layout_below="@+id/textView5" android:id="@+id/textView11" android:textColor="#505050" android:text="복용 중인 약의 봉투, 약 사진 등을 첨부하세요." android:shadowRadius="1.0" android:shadowDy="1.0" android:shadowDx="1.0" android:shadowColor="@color/black" />
+
+    <ImageView android:background="@drawable/health_data" android:layout_height="103dp" android:layout_width="103dp" tools:layout_editor_absoluteY="267dp" tools:layout_editor_absoluteX="30dp" android:layout_below="@+id/textView11" android:id="@+id/imageView" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+
+    <ImageView android:background="@drawable/box9" android:layout_height="3.25dp" android:layout_width="350dp" tools:layout_editor_absoluteY="174dp" tools:layout_editor_absoluteX="30dp" android:layout_below="@+id/textView11" android:id="@+id/imageView8" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+
+    <ImageView android:background="@drawable/health_data" android:layout_height="103dp" android:layout_width="103dp" tools:layout_editor_absoluteY="267dp" tools:layout_editor_absoluteX="154dp" android:layout_below="@+id/textView11" android:id="@+id/imageView5" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+
+    <ImageView android:background="@drawable/health_data" android:layout_height="103dp" android:layout_width="103dp" tools:layout_editor_absoluteY="267dp" tools:layout_editor_absoluteX="277dp" android:layout_below="@+id/textView11" android:id="@+id/imageView6" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+
+    <ImageView android:background="@drawable/img_5" android:layout_height="25dp" android:layout_width="25dp" tools:layout_editor_absoluteY="120dp" tools:layout_editor_absoluteX="193dp" android:layout_below="@+id/textView11" android:id="@+id/imageView7" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+
+    <Button tools:ignore="UnknownId,UnknownIdInLayout" android:layout_height="35dp" android:layout_width="76dp" tools:layout_editor_absoluteY="198dp" tools:layout_editor_absoluteX="128dp" android:layout_below="@+id/editText2" android:id="@+id/button1" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:textSize="10sp" android:textColor="@color/white" android:text="사진촬영" app:backgroundTint="@color/base" android:textStyle="bold"/>
+
+    <Button android:layout_height="48dp" android:layout_width="343dp" tools:layout_editor_absoluteY="394dp" tools:layout_editor_absoluteX="34dp" android:layout_below="@+id/imageView" android:id="@+id/button2" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:textSize="22dp" android:textColor="@color/white" android:text="저장" android:backgroundTint="@color/base" android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,9 +22,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import org.techtown.oasis.DoctorList.Fragment15;
 import org.techtown.oasis.DoctorList.Fragment16;
-import org.techtown.oasis.HospitalList.Child10.FragmentChild8;
 import org.techtown.oasis.HospitalList.OnPersonItemClickListener;
 import org.techtown.oasis.HospitalList.Person;
 import org.techtown.oasis.HospitalList.PersonAdapter;
@@ -35,8 +33,6 @@ import org.techtown.oasis.R;
 import org.techtown.oasis.SearchAdapter;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class FragmentChild5 extends Fragment {
