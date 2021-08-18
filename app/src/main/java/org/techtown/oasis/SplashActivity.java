@@ -19,6 +19,6 @@ public class SplashActivity extends AppCompatActivity {
 
                 finish();
             }
-        }, 1000);  // 1초 후 화면 전환
+        }, 2000);  // 2초 후 화면 전환
     }
 }
