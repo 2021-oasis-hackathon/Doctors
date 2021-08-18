@@ -1,5 +1,7 @@
 package org.techtown.oasis.HospitalList;
 
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -99,6 +101,9 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
             textView2 = itemView.findViewById(R.id.textView2);
             textView3 = itemView.findViewById(R.id.textView3);
             textView4 = itemView.findViewById(R.id.textView4);
+
+            imageView.setBackground(new ShapeDrawable(new OvalShape()));   // 의사 사진 동그랗게
+            imageView.setClipToOutline(true);   // 의사 사진 동그랗게
 
             itemView.setOnClickListener(new View.OnClickListener() {
 

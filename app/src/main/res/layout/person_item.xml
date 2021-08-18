@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="#FFFFFFFF"
-        app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         app:cardUseCompatPadding="true" >
 
@@ -21,8 +20,9 @@
 
             <ImageView
                 android:id="@+id/imgCapture"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
                 tools:srcCompat="@mipmap/ic_launcher_round" />
 
             <LinearLayout
@@ -37,14 +37,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="이름"
-                    android:textSize="28sp" />
+                    android:textColor="#464646"
+                    android:textSize="22sp" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="병원 이름"
-                    android:textColor="#FF0000FF"
+                    android:text="병원명"
+                    android:textColor="#464646"
                     android:textSize="20sp" />
 
                 <LinearLayout
@@ -57,8 +58,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="대기 시간"
-                        android:textSize="20sp" />
+                        android:text="대기시간"
+                        android:textColor="#9F9F9F"
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -66,14 +68,16 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="거리"
-                        android:textSize="20sp" />
+                        android:textColor="#9F9F9F"
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#9F9F9F"
                         android:text="km"
-                        android:textSize="20sp" />
+                        android:textSize="17sp" />
 
                 </LinearLayout>
 
