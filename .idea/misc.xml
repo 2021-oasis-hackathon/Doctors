@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box10.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box2.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box3.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/drawable/box4.xml" value="0.38229166666666664" />
@@ -35,7 +36,7 @@
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_3.xml" value="0.2726449275362319" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_4.xml" value="0.24479166666666666" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_check_popup.xml" value="0.18" />
-        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_delivery.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_delivery.xml" value="0.33" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_health_data.xml" value="0.25" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_health_data2.xml" value="0.2726449275362319" />
         <entry key="..\:/Users/hello/AndroidStudioProjects/Doctors-myewon2/app/src/main/res/layout/fragment_history.xml" value="0.36614583333333334" />
