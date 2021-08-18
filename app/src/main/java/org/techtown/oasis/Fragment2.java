@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -70,11 +71,13 @@ public class Fragment2 extends Fragment {
 
         return rootView;
     }
+
     // 검색 창 구현
     private void initUI(ViewGroup rootView) {
         editSearch = rootView.findViewById(R.id.editSearch);
         listView = rootView.findViewById(R.id.listView);
-        // listView.setVisibility(View.INVISIBLE); // 리스트 뷰 숨김
+
+        listView.setVisibility(View.INVISIBLE); // 처음에는 리스트 뷰 숨김
 
         // 리스트 생성
         list = new ArrayList<String>();
@@ -115,6 +118,14 @@ public class Fragment2 extends Fragment {
             public void afterTextChanged(Editable editable) {
                 String text = editSearch.getText().toString();
                 search(text);  // search 메소드 호출
+            }
+        });
+
+        // editSearch 설정
+        editSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listView.setVisibility(View.VISIBLE); // 리스트 뷰 보여줌
             }
         });
 
@@ -192,10 +203,10 @@ public class Fragment2 extends Fragment {
             }
         });
 
-        // 내 정보 입력하러 가기
-        ImageButton imageButton;
-        imageButton = rootView.findViewById(R.id.imageButton123);
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        // 나의 건강 정보 입력하러 가기
+        TextView textView115;
+        textView115 = rootView.findViewById(R.id.textView115);
+        textView115.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // fragment_3로 전환
@@ -205,6 +216,21 @@ public class Fragment2 extends Fragment {
                 transaction.commit();
             }
         });
+
+        // 우리 지역 의료 해택 확인하기
+        TextView textView117;
+        textView117 = rootView.findViewById(R.id.textView117);
+        textView117.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // fragment_7로 전환
+                Fragment7 fragment7 = new Fragment7();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, fragment7);
+                transaction.commit();
+            }
+        });
+
     }
 
     // 검색을 수행하는 메소드
@@ -213,7 +239,7 @@ public class Fragment2 extends Fragment {
         list.clear();
 
         if (charText.length() == 0) {
-            list.addAll(arraylist);
+            // list.addAll(arraylist);
         }
         else {
             // 문자 입력을 할 때 리스트의 모든 데이터를 검색
