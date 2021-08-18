@@ -1,7 +1,9 @@
 package org.techtown.oasis;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +37,12 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // 액션바 설정
+        // 액션바 타이틀 변경
+        getSupportActionBar().setTitle("Dr. Hello");
+        //액션바 배경색 변경
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.base)));
 
         fragment1 = new org.techtown.oasis.Fragment1();
         fragment2 = new org.techtown.oasis.Fragment2();
@@ -88,15 +96,6 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
                     }
                 })
                 .start();
-
-        Button myButton = findViewById(R.id.myButton);
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // fragment_4로 전환
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment4).commit();
-            }
-        });
     }
 
     public void onTabSelected(int position) {
@@ -112,5 +111,24 @@ public class MainActivity extends AppCompatActivity implements org.techtown.oasi
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_btn1:
+                // fragment_4로 전환
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment4).commit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
