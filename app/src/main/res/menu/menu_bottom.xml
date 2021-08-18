@@ -4,20 +4,23 @@
 
     <item
         android:id="@+id/tab1"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/icon_bef_home"
         android:enabled="true"
         android:title="홈" />
 
     <item
         android:id="@+id/tab2"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/icon_bef_reservation"
         android:enabled="true"
-        android:title="예약내역" />
+        android:title="나의 예약" />
 
     <item
         android:id="@+id/tab3"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/icon_medihistory"
         android:enabled="true"
-        android:title="진료내역" />
+        android:title="지난 진료" />
 
 </menu>
