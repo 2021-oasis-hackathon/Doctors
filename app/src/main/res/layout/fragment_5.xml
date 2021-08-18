@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:shadowColor="@color/black"
         android:shadowDx="1.0"
         android:shadowDy="1.0"
@@ -39,8 +40,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.191"
-        tools:ignore="MissingConstraints"
-        android:layout_marginLeft="36dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView10"
@@ -315,8 +315,8 @@
         app:layout_constraintEnd_toStartOf="@+id/textView61"
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.369"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintVertical_bias="0.346"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -345,8 +345,10 @@
         android:layout_width="373dp"
         android:layout_height="88dp"
         android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
         android:background="@drawable/box2"
         android:text="@string/textView4"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -354,12 +356,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
+
+
         app:layout_constraintVertical_bias="0.267"
-        tools:ignore="MissingConstraints"
-
-
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="23dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView23"
@@ -406,9 +406,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textView36"
+        android:textColor="@color/text4"
         android:textSize="12dp"
         android:textStyle="bold"
-        android:textColor="@color/text4"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.28"
@@ -554,6 +554,13 @@
         android:layout_height="wrap_content"
         app:barrierDirection="top"
         app:constraint_referenced_ids="textView3,textView10,textView25,textView43,textView44,textView45,imgCapture,imageView2,imageView3,imageView4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
