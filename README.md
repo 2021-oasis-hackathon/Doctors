@@ -52,5 +52,6 @@
 # :pill: Prototype
 ### :bulb: 시연영상 https://www.youtube.com/watch?v=DCH5N-EY0Mk<br/>
 ### :bulb: 안드로이드 스튜디오, 자바 사용<br/><br/>
-#### :exclamation::exclamation:  진료 가능 의사에서 지도는 비용 때문에 사용량을 제한해두었기 때문에, 구글맵 API 키를 받아서 사용해야 동작합니다 
+#### :exclamation::exclamation:  진료 가능 의사에서 지도는 비용 때문에 사용량을 제한해두었기 때문에, 구글맵 API 키를 받아서 사용해야 합니다.
 [구글맵 콘솔](https://console.cloud.google.com) 방문 -> 대시보드에서 프로젝트 만들기 -> API 및 서비스 사용 설정 -> Maps SDK for android 선택 -> 사용 설정 선택 -> 사용자 인증 정보 만들기 -> API 키 복사 -> 안드로이드 스튜디오 manifests 파일에서 meta-data value 값을 복사한 API 키로 바꿈 
+#### :exclamation::exclamation: branch를 여러 개 만들어 개발을 진행하였습니다 (개발자 커밋 확인)
